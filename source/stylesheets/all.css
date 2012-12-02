@@ -1,11 +1,38 @@
+/* Common elements
+--------------------------------------------------- */
+
 body {
   background: #ffe;
+  color: #333;
   font-family: 'Open sans', Arial, Helvetica, sans-serif;
-  margin-left: 285px;
+  margin: 0 20px 50px 285px;
   max-width: 800px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open sans condensed', 'Arial narrow', Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+pre, code, kbd, samp {
+  font: 0.9em 'Menlo', 'Consolas', 'Bitstream Vera Sans mono', monospace;
+}
+
+code {
+  background: #fff;
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+/* Layout
+---------------------------------------------------- */
+
 #sidebar {
+  background: #fff;
+  background: rgba(255, 255, 255, .4);
   position: fixed;
   padding: 15px;
   width: 220px;
@@ -14,4 +41,5 @@ body {
   bottom: 0;
   box-shadow: 3px 0 5px rgba(160, 160, 128, .2);
 }
+
 
