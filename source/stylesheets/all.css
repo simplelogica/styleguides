@@ -42,4 +42,22 @@ code {
   box-shadow: 3px 0 5px rgba(160, 160, 128, .2);
 }
 
-
+#sidebar ul {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+#sidebar li {
+  font: 22px 'Open sans condensed', Arial Narrow, Arial, Helvetica, sans-serif;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+#sidebar a {
+  display:block;
+  padding: 4px 10px;
+  text-decoration: none;
+  color: #000;
+}
+#sidebar .current {
+  font-weight: bold;
+}

@@ -1,4 +1,5 @@
 ---
+nav_title: General
 title: Consideraciones generales
 ---
 
