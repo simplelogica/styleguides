@@ -18,13 +18,24 @@ pre, code, kbd, samp {
   font: 0.9em 'Menlo', 'Consolas', 'Bitstream Vera Sans mono', monospace;
 }
 
-code {
+pre, code {
   background: #fff;
   padding: 2px 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
+pre {
+  padding: 10px 15px;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+}
 
 
 /* Layout
