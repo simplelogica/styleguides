@@ -20,9 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 
 pre, code, kbd, samp {
   font: 0.9em 'Menlo', 'Consolas', 'Bitstream Vera Sans mono', monospace;
-}
-
-pre, code {
   background: #fff;
   padding: 2px 5px;
   border: 1px solid #ccc;
