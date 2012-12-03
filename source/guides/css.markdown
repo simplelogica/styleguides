@@ -53,6 +53,26 @@ Este bloque da una idea de cómo tiene que quedar
       top: 0;
     }
 
+### Múltiples selectores
+
+<!-- No estoy del todo convencido con esto -->
+En el caso de selectores múltiples... depende: si son cortos en la misma linea, dejando un espacio entre la coma
+<kbd>,</kbd> y el siguiente selector. Si son largos en lineas a parte.
+
+Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la legibilidad.
+
+    .pre, .code {
+      font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
+    }
+
+    body#home #content .separator p span,
+    body#home #content .separator .wadus span {
+      /*
+       * Si tienes un selector así el menor de tus problemas
+       * es si lo pones en una linea a parte o no.
+       */
+    }
+
 ### Dentro del bloque
 
 Ponemos una propiedad por linea
