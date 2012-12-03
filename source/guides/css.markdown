@@ -93,4 +93,19 @@ Dentro del bloque las propiedades deben seguir este orden
       ...
     }
 -->
+## Nombres de los selectores
+
+Ver la [guía general](/guides/general.html#nombres_de_identificadores). Los espacios se sustituirán por guiones <kbd>-</kbd>.
+Nada de caracteres de subrayado <kbd>_</kbd> o camelCase.
+
+    #noEscribiremosAsi { }
+    #asi_tampoco { }
+    #mucho-mejor { }
+
+La razón de esto es que Internet Explorer crea una [variable global][IE_globals]
+con el mismo nombre que el ID de los elementos. Como un <kbd>-</kbd> no es válido dentro de un identificador en Javascript
+evitamos que cree dichas variables y nos ahorramos dolores de cabeza.
+
+La otra razón es que te ahorras pulsar la tecla de mayusculas. ¡Una pulsación ahorrada es un caracter más en el código!
 [w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
+[IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
