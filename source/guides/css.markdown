@@ -11,14 +11,14 @@ No es necesario incluir un `@charset` al principio del fichero. Si no se indica 
 
 ## Sintáxis
 
-La llave de apertura `{` se pone en la misma linea del selector, dejando un espacio con el mismo.
+La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el mismo.
 
-La llave de cierre `}` se pone en su propia linea, identada con el selector. Dejamos un espacio en blanco entre la llave
+La llave de cierre <kbd>}</kbd> se pone en su propia linea, identada con el selector. Dejamos un espacio en blanco entre la llave
 de cierre y el siguiente selector
 
-Dejamos un espacio entre los dos puntos `:` de una propiedad y su valor.
+Dejamos un espacio entre los dos puntos <kbd>:</kbd> de una propiedad y su valor.
 
-Siempre ponemos el punto y coma `;` de cierre, incluso en la última linea.
+Siempre ponemos el punto y coma <kbd>;</kbd> de cierre, incluso en la última linea.
 
 Este bloque da una idea de cómo tiene que quedar
 
