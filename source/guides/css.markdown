@@ -7,7 +7,8 @@ title: Hojas de estilo (SASS/CSS)
 
 Ver las [consideraciones generales](/guides/general.html)
 
-No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores asumen UTF8.
+No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores asumen utf8 (no lo digo
+yo, ¡[está en el estandar][w3c]!).
 
 ## Sintáxis
 
@@ -73,3 +74,4 @@ Dentro del bloque las propiedades deben seguir este orden
       ...
     }
 -->
+[w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
