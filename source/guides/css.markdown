@@ -107,5 +107,37 @@ con el mismo nombre que el ID de los elementos. Como un <kbd>-</kbd> no es váli
 evitamos que cree dichas variables y nos ahorramos dolores de cabeza.
 
 La otra razón es que te ahorras pulsar la tecla de mayusculas. ¡Una pulsación ahorrada es un caracter más en el código!
+
+## Especificidad
+
+La necesaria. Si hay más de tres niveles suele indicar un problema y conviene refactorizar. Por ejemplo, para el
+siguiente HTML:
+
+    <nav id="main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Nuestras diatrivas</a></li>
+        <li><a href="/contacto">Dejanos una postal</a></li>
+      </ul>
+    </nav>
+
+Si queremos dar estilo a los enlaces usaremos la mínima especificidad necesaria.
+
+    /* Con esto haceis llorar a Bert Bos, y a mi. */
+    #main ul li a {
+      ...
+    }
+
+    /* Con esto os invitará a unas cañas */
+    #main a {
+      ...
+    }
+
+Es innecesario y [lento][mdn_css_Efficiency].
+Además si en el futuro queremos dar un estilo diferente a uno de los enlaces tenemos menos especificidad que
+sobreescribir.
+
 [w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
+[mdn_css_efficiency]: https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS#Avoid_the_descendant_selector.21
+
