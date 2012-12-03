@@ -10,6 +10,25 @@ Ver las [consideraciones generales](/guides/general.html)
 No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores asumen utf8 (no lo digo
 yo, ¡[está en el estandar][w3c]!).
 
+Los bloques se identan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en SASS, etc.) se va
+anidando la identación.
+
+    #por-favor-no-hagas-esto {
+    width: 100px;
+    height: 100px;
+    }
+
+    #mejor-asi {
+      width: 100px;
+      height: 100px;
+
+      &.con-sass {
+        width: 200px;
+        height: 50px;
+      }
+    }
+
+
 ## Sintáxis
 
 La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el mismo.
