@@ -5,7 +5,7 @@ title: Hojas de estilo (SASS/CSS)
 
 ## Codificación e identado
 
-Ver las [consideraciones generales](/guides/general.html)
+Ver las [consideraciones generales](/guides/general.html).
 
 No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores
 asumen utf8 (no lo digo yo, ¡[está en el estandar][w3c]!).
