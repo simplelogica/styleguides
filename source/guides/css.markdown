@@ -7,11 +7,11 @@ title: Hojas de estilo (SASS/CSS)
 
 Ver las [consideraciones generales](/guides/general.html)
 
-No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores asumen utf8 (no lo digo
-yo, ¡[está en el estandar][w3c]!).
+No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores
+asumen utf8 (no lo digo yo, ¡[está en el estandar][w3c]!).
 
-Los bloques se identan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en SASS, etc.) se va
-anidando la identación.
+Los bloques se identan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en
+SASS, etc.) se va anidando la identación.
 
     #por-favor-no-hagas-esto {
     width: 100px;
@@ -31,10 +31,11 @@ anidando la identación.
 
 ## Sintáxis
 
-La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el mismo.
+La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el
+mismo.
 
-La llave de cierre <kbd>}</kbd> se pone en su propia linea, identada con el selector. Dejamos un espacio en blanco entre la llave
-de cierre y el siguiente selector
+La llave de cierre <kbd>}</kbd> se pone en su propia linea, identada con el selector. Dejamos un
+espacio en blanco entre la llave de cierre y el siguiente selector
 
 Dejamos un espacio entre los dos puntos <kbd>:</kbd> de una propiedad y su valor.
 
@@ -53,11 +54,11 @@ Este bloque da una idea de cómo tiene que quedar
       top: 0;
     }
 
-### Múltiples selectores
+## Múltiples selectores
 
 <!-- No estoy del todo convencido con esto -->
-En el caso de selectores múltiples... depende: si son cortos en la misma linea, dejando un espacio entre la coma
-<kbd>,</kbd> y el siguiente selector. Si son largos en lineas a parte.
+En el caso de selectores múltiples... depende: si son cortos en la misma linea, dejando un espacio
+entre la coma <kbd>,</kbd> y el siguiente selector. Si son largos en lineas a parte.
 
 Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la legibilidad.
 
@@ -107,6 +108,10 @@ En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
     #nav .contact { background-position: 0 -64px; }
     #nav .blog    { background-position: 0 -96px; }
 
+## Orden de las propiedades
+
+(Hablar de esto con Victor, que es el que lo tiene controlado).
+
 <!--
 Dentro del bloque las propiedades deben seguir este orden
 
@@ -153,8 +158,8 @@ caracter más en el código!
 
 ## Especificidad
 
-La necesaria. Si hay más de tres niveles suele indicar un problema y conviene refactorizar. Por ejemplo, para el
-siguiente HTML:
+La necesaria. Si hay más de tres niveles suele indicar un problema y conviene refactorizar. Por
+ejemplo, para el siguiente HTML:
 
     <nav id="main">
       <ul>
@@ -166,19 +171,18 @@ siguiente HTML:
 
 Si queremos dar estilo a los enlaces usaremos la mínima especificidad necesaria.
 
-    /* Con esto haceis llorar a Bert Bos, y a mi. */
+    /* Con esto haceis llorar a Bert Bos. */
     #main ul li a {
       ...
     }
 
-    /* Con esto os invitará a unas cañas */
+    /* Mejor así. */
     #main a {
       ...
     }
 
-Es innecesario y [lento][mdn_css_Efficiency].
-Además si en el futuro queremos dar un estilo diferente a uno de los enlaces tenemos menos especificidad que
-sobreescribir.
+Es innecesario y [lento][mdn_css_Efficiency]. Además si en el futuro queremos dar un estilo
+diferente a uno de los enlaces tenemos menos especificidad que sobreescribir.
 
 [w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
