@@ -3,15 +3,15 @@ nav_title: General
 title: Consideraciones generales
 ---
 
-La regla de oro es **ser consistente**. Cuando modifiques código en un fichero existente echa un vistazo
-alrededor, mira como está hecho y hazlo igual. Dentro del mismo fichero, es mejor un mal estilo que una
-mezcla de estilos.
+La regla de oro es **ser consistente**. Cuando modifiques código en un fichero existente echa un
+vistazo alrededor, mira como está hecho y hazlo igual. Dentro del mismo fichero, es mejor un mal
+estilo que una mezcla de estilos.
 
 Para ficheros nuevos mejor usar esta guía.
 
-Los editores más usados (Vim, Emacs, Textmate, Sublime text, etc.) se pueden configurar para automatizar
-lo que contamos aquí. Puedes usar el editor o IDE que quieras, pero si permite automatizar determinadas
-cosas te ahorrará preocupaciones y nosotros viviremos más felices.
+Los editores más usados (Vim, Emacs, Textmate, Sublime text, etc.) se pueden configurar para
+automatizar lo que contamos aquí. Puedes usar el editor o IDE que quieras, pero si permite
+automatizar determinadas cosas te ahorrará preocupaciones y nosotros viviremos más felices.
 
 ## Codificación y fin de linea
 
@@ -25,8 +25,8 @@ Casi todos usamos Mac o Linux, así que el fin de linea debe ser el de UNIX (LF)
 Dos espacios.
 
 No parece haber un estándar para Javascript/HTML/CSS en esto, así que heredamos el de Ruby/Rails.
-Además, al usar espacios se mantiene la identación al ver el código fuente en otras partes (navegador,
-diffs, etc.).
+Además, al usar espacios se mantiene la identación al ver el código fuente en otras partes
+(navegador, diffs, etc.).
 
 Si puntualmente hay que usar un lenguaje con otras reglas aceptadas (como Python)
 [se usarán las del lenguaje][pep8].
