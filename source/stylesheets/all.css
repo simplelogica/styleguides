@@ -2,7 +2,7 @@
 --------------------------------------------------- */
 
 body {
-  background: #ffe;
+  background: #f0f0f0;
   color: #333;
   font-family: 'Open sans', Arial, Helvetica, sans-serif;
   margin: 0 20px 50px 285px;
@@ -43,15 +43,13 @@ pre code {
 ---------------------------------------------------- */
 
 #sidebar {
-  background: #fff;
-  background: rgba(255, 255, 255, .4);
+  background: #111;
   position: fixed;
   padding: 15px;
   width: 220px;
   left: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 3px 0 5px rgba(160, 160, 128, .2);
 }
 
 #sidebar ul {
@@ -62,14 +60,15 @@ pre code {
 #sidebar li {
   font: 22px 'Open sans condensed', Arial Narrow, Arial, Helvetica, sans-serif;
   margin: 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #333;
 }
 #sidebar a {
   display:block;
   padding: 4px 10px;
   text-decoration: none;
-  color: #000;
+  color: #ccc;
 }
 #sidebar .current {
+  color: #fff;
   font-weight: bold;
 }
