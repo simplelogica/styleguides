@@ -25,7 +25,7 @@ h2 {
   font-size: 20px;
   margin: 1em 0 1ex;
 }
-p {
+p, ul, ol {
   font-size: 14px;
   line-height: 1.4;
   margin:1em 0;
