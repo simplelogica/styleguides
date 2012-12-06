@@ -73,7 +73,7 @@ Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la
        */
     }
 
-### Dentro del bloque
+## Colocación de las propiedades
 
 Ponemos una propiedad por linea
 
@@ -87,8 +87,9 @@ Ponemos una propiedad por linea
       font: 1.4em Arial, Helvetica, sans-serif;
     }
 
-Si tenemos varios selectores que vayan variando la misma propiedad en el mismo elemento (un `background-position` por ejemplo) podemos saltarnos esta regla. Poner las propiedades en una linea permite juntar los selectores y asociarlos al
-elemento que están modificando.
+Si tenemos varios selectores que vayan variando la misma propiedad en el mismo elemento (un
+`background-position` por ejemplo) podemos saltarnos esta regla. Poner las propiedades en una linea
+permite juntar los selectores y asociarlos al elemento que están modificando.
 
 En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
 
