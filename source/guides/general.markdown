@@ -53,9 +53,13 @@ En expresiones y sentencias los espacios en blanco son bondad. Mejor código leg
 
 ## Nombres de identificadores
 
-Tan corto como sea posible. Tan largo como sea necesario.
+Tan corto como sea posible. Tan largo como sea necesario. Por ejemplo, no usar `navigation` si con
+`nav` basta. Usar `author` si `aut` no es suficiente.
 
-Por ejemplo, no usar `navigation` si con `nav` basta. Usar `author` si `aut` no es suficiente.
+En cuanto al idioma, mejor en Inglés. Las APIs de todo con lo que trabajamos están en Inglés, así
+que mejor ser consistentes.
+
+
 [ie_bom]: http://stackoverflow.com/a/5063836/508684
 [pep8]: http://www.python.org/dev/peps/pep-0008/#code-lay-out
 [whitespace]: http://stackoverflow.com/q/729692/508684
