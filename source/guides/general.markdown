@@ -33,11 +33,23 @@ Si puntualmente hay que usar un lenguaje con otras reglas aceptadas (como Python
 
 ## Espacios en blanco
 
-Los espacios en blanco al final de linea los quitamos. No aportan nada y manchan los diffs.
+Los espacios en blanco al final de linea los quitamos. No aportan nada y manchan los diffs. Las
+lineas en blanco no se identan por la misma razón.
 
-Las lineas en blanco no se identan por la misma razón.
+Es preferible que los ficheros [terminen con un caracter de fin de linea][whitespace].
 
-Los ficheros deben terminar con un caracter de fin de linea. [Razón aqui](http://stackoverflow.com/q/729692/508684)
+En expresiones y sentencias los espacios en blanco son bondad. Mejor código legible que compacto.
+
+    // Meh...
+    for(var i=0;i<arr.length;i++){
+      ...
+    }
+
+    // Mejor
+    for (var i = 0; i < arr.length; i++) {
+      ...
+    }
+
 
 ## Nombres de identificadores
 
@@ -46,3 +58,4 @@ Tan corto como sea posible. Tan largo como sea necesario.
 Por ejemplo, no usar `navigation` si con `nav` basta. Usar `author` si `aut` no es suficiente.
 [ie_bom]: http://stackoverflow.com/a/5063836/508684
 [pep8]: http://www.python.org/dev/peps/pep-0008/#code-lay-out
+[whitespace]: http://stackoverflow.com/q/729692/508684
