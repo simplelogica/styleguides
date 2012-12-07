@@ -239,8 +239,9 @@ Por ejemplo, [github](https://github.com/styleguide/css) usa `px`.
 
 Usar `@font-face` está bien, pero intentaremos no irnos mucho en tiempos de carga.
 
-Solemos usar [Font Squirrel][FF_Gen] para generar los `@font-face`, aunque hay que retocar un poco
-el CSS que genera. Por ejemplo, en este CSS:
+Si la fuente está en Google Web Fonts la cogemos de ahí. Si no, solemos usar [Font Squirrel][FF_Gen]
+para generar los `@font-face`, aunque hay que retocar un poco el CSS que genera. Por ejemplo, en
+este CSS:
 
     @font-face {
       font-family: 'ArvoRegular';
