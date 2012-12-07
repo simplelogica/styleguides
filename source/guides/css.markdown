@@ -234,7 +234,67 @@ Fuentes: ¿`px` o `em`? Usar `em` viene de los tiempos de cuando IE6 no podía r
 Por ejemplo, [github](https://github.com/styleguide/css) usa `px`.
 
 -----
+
+## Fuentes
+
+Usar `@font-face` está bien, pero intentaremos no irnos mucho en tiempos de carga.
+
+Solemos usar [Font Squirrel][FF_Gen] para generar los `@font-face`, aunque hay que retocar un poco
+el CSS que genera. Por ejemplo, en este CSS:
+
+    @font-face {
+      font-family: 'ArvoRegular';
+      src: ...;
+      font-weight: normal;
+      font-style: normal
+    }
+
+    @font-face {
+      font-family: 'ArvoBold';
+      src: ...;
+      font-weight: normal;
+      font-style: normal
+    }
+
+Hay que poner el mismo `font-family` en las dos declaraciones y cambiar el `font-weight` en la
+segunda.
+
+    @font-face {
+      font-family: 'Arvo';
+      src: ...;
+      font-weight: normal;
+      font-style: normal
+    }
+
+    @font-face {
+      font-family: 'Arvo';
+      src: ...;
+      font-weight: bold;
+      font-style: normal
+    }
+
+
+Aunque el soporte para `@font-face` es bastante bueno (incluso IE6) conviene siempre añadir una o
+dos fuentes de sistema en el valor de `font-family`, terminando la familia genérica que corresponda.
+
+    /* http://www.google.com/webfonts/specimen/Petrona */
+    h1 {
+      font-family: Petrona, Georgia, serif;
+    }
+
+    /* http://www.google.com/webfonts/specimen/Open+Sans */
+    p {
+      font-family: 'Open sans', Arial, sans-serif;
+    }
+
+    /* http://www.google.com/webfonts/specimen/Inconsolata */
+    pre, code {
+      font-family: Inconsolata, Consolas, 'Ubuntu Mono',monospace;
+    }
+
+
+
 [w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
 [mdn_css_efficiency]: https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS#Avoid_the_descendant_selector.21
-
+[FF_Gen]: http://www.fontsquirrel.com/fontface/generator
