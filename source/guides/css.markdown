@@ -234,6 +234,22 @@ Fuentes: ¿`px` o `em`? Usar `em` viene de los tiempos de cuando IE6 no podía r
 Por ejemplo, [github](https://github.com/styleguide/css) usa `px`.
 
 -----
+## Reset de estilos
+
+<!-- Tengo claro que el reset de [Eric Meyer](http://meyerweb.com/eric/tools/css/reset/index.html),
+o el clásico `* { margin:0; padding:0; }` no. Las opciones que nos quedan son:
+
+- Usar [Normalize](http://necolas.github.com/normalize.css/) tal cual está (lo estoy usando en esta
+  guía).
+- Crear uno propio al estilo de lo que [ya tengo hecho](https://github.com/afgomez/base.css).
+- Hacer un fork de normalizer y adaptar lo que no nos guste.
+
+¿Qué reseteamos por defecto? ¿Fuentes y márgenes de <p> <ul> y amigos? ¿Tiene sentido? Si no se
+resetea hay que acordarse de ponerlo a 0 en listas de navegacion y cosas así pero si se resetea,
+crear estilos por defecto para texto de contenido es un poco coñazo.
+
+-->
+
 
 ## Fuentes
 
