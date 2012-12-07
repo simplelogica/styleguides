@@ -8,7 +8,7 @@ title: Hojas de estilo (SASS/CSS)
 Ver las [consideraciones generales](/guides/general.html).
 
 No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores
-asumen utf8 (no lo digo yo, ¡[está en el estandar][w3c]!).
+[asumen utf8][css_utf8].
 
 Los bloques se identan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en
 SASS, etc.) se va anidando la identación.
@@ -294,7 +294,7 @@ dos fuentes de sistema en el valor de `font-family`, terminando la familia gené
 
 
 
-[w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
+[css_utf8]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
 [mdn_css_efficiency]: https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS#Avoid_the_descendant_selector.21
 [FF_Gen]: http://www.fontsquirrel.com/fontface/generator
