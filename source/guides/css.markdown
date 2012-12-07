@@ -207,6 +207,20 @@ Si queremos dar estilo a los enlaces usaremos la mínima especificidad necesaria
 Es innecesario y [lento][mdn_css_Efficiency]. Además si en el futuro queremos dar un estilo
 diferente a uno de los enlaces tenemos menos especificidad que sobreescribir.
 
+## Colores
+
+Hexadecimal es preferido. Usaremos la sintáxis compacta cuando sea posible.
+
+    /* Meh... */
+    a {
+      color: #006699;
+    }
+
+    /* Mejor */
+    a {
+      color: #069;
+    }
+
 [w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
 [mdn_css_efficiency]: https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS#Avoid_the_descendant_selector.21
