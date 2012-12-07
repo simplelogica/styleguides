@@ -74,6 +74,29 @@ Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la
        */
     }
 
+## Propiedades
+
+Usaremos las propiedades _shorthand_ cuando tenga sentido.
+
+    /* Meh... */
+    body {
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Aún lo podemos mejorar... */
+    body {
+      margin: 10px 10px 10px 10px;
+    }
+
+    /* Perfecto */
+    body {
+      margin: 10px;
+    }
+
+
 ## Colocación de las propiedades
 
 Ponemos una propiedad por linea
