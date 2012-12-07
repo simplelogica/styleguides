@@ -221,6 +221,19 @@ Hexadecimal es preferido. Usaremos la sintáxis compacta cuando sea posible.
       color: #069;
     }
 
+## Unidades, dimensiones, etc.
+
+Si algo tiene valor `0` quitamos la unidad.
+
+Para las dimensiones de las cajas preferimos usar `px` ya que nos dan mayor control. Para sitios en
+responsive evaluaremos el uso de `%` donde pueda tener sentido.
+
+-----
+
+Fuentes: ¿`px` o `em`? Usar `em` viene de los tiempos de cuando IE6 no podía redimensionar texto si estaba en `px` pero a día de hoy todos los navegadores hacen zoom de modo decente.
+Por ejemplo, [github](https://github.com/styleguide/css) usa `px`.
+
+-----
 [w3c]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
 [mdn_css_efficiency]: https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS#Avoid_the_descendant_selector.21
