@@ -228,12 +228,15 @@ Si algo tiene valor `0` quitamos la unidad.
 Para las dimensiones de las cajas preferimos usar `px` ya que nos dan mayor control. Para sitios en
 responsive evaluaremos el uso de `%` donde pueda tener sentido.
 
------
+<!--
 
 Fuentes: ¿`px` o `em`? Usar `em` viene de los tiempos de cuando IE6 no podía redimensionar texto si estaba en `px` pero a día de hoy todos los navegadores hacen zoom de modo decente.
 Por ejemplo, [github](https://github.com/styleguide/css) usa `px`.
 
------
+Si nos decidimos por `em` hay que poner un valor por defecto que nos mantenga cuerdos (1em = 10px).
+
+-->
+
 ## Reset de estilos
 
 <!-- Tengo claro que el reset de [Eric Meyer](http://meyerweb.com/eric/tools/css/reset/index.html),
