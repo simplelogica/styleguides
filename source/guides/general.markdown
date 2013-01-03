@@ -50,7 +50,6 @@ En expresiones y sentencias los espacios en blanco son bondad. Mejor código leg
       ...
     }
 
-
 ## Nombres de identificadores
 
 Tan corto como sea posible. Tan largo como sea necesario. Por ejemplo, no usar `navigation` si con
@@ -58,6 +57,51 @@ Tan corto como sea posible. Tan largo como sea necesario. Por ejemplo, no usar `
 
 En cuanto al idioma, mejor en Inglés. Las APIs de todo con lo que trabajamos están en Inglés, así
 que mejor ser consistentes.
+
+## Documentación y comentarios
+
+- Escribir código es más divertido que escribir su documentación.
+- Descifrar qué hace un fragmento de código es más dificil que leer documentación.
+- El código se lee más veces de las que se escribe, muchas veces por más personas.
+
+Los beneficios de escribir la documentación **siempre** compensan el esfuerzo inicial, así que mejor documentar.
+
+En cuanto al idioma mejor en Inglés. Si algo es susceptible de liberarse como open source nos
+evitamos tener que traducirlo.
+
+Si necesitamos hacer una marcianada en vez de explicar **qué** estamos haciendo es mejor explicar **por qué** lo hacemos. Si hay un ticket relacionado se puede indicar. Por ejemplo en este código:
+
+    /* Booo! */
+    #header {
+      ...
+      zoom: 1; /* Triggers hasLayout */
+    }
+
+    /* Bien!! */
+    #header {
+      ...
+      zoom: 1; /* Helps IE to calculate the height properly. Refs #1234 */
+    }
+
+En bloques de comentarios grandes usamos markdown para dar formato:
+
+    /**
+     * jQuery.lastTweet
+     * ----------------
+     *
+     * Fetch the last tweet from the specified user
+     *
+     * Usage:
+     *
+     *     $('#container').lastTweet('username');
+     *
+     * This will parse URLs and mentions and write them into the `#container` node.
+     */
+    ;(function($) {
+      "use strict";
+      $.fn.lastTweet = function...
+      ...
+    }(jQuery));
 
 
 [ie_bom]: http://stackoverflow.com/a/5063836/508684
