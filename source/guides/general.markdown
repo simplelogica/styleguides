@@ -22,14 +22,14 @@ Casi todos usamos Mac o Linux, así que el fin de linea debe ser el de UNIX (LF)
 
 ## Identado
 
-Dos espacios.
-
-No parece haber un estándar para Javascript/HTML/CSS en esto, así que heredamos el de Ruby/Rails.
-Además, al usar espacios se mantiene la identación al ver el código fuente en otras partes
-(navegador, diffs, etc.).
+Dos espacios. No parece haber un estándar para Javascript/HTML/CSS en esto, así que heredamos el de
+Ruby/Rails. Además, al usar espacios se mantiene la identación al ver el código fuente en otras
+partes (navegador, diffs, etc.).
 
 Si puntualmente hay que usar un lenguaje con otras reglas aceptadas (como Python)
 [se usarán las del lenguaje][pep8].
+
+Si necesitas más de tres niveles de identación [seguramente tienes un problema][linus_indent].
 
 ## Espacios en blanco
 
@@ -62,4 +62,5 @@ que mejor ser consistentes.
 
 [ie_bom]: http://stackoverflow.com/a/5063836/508684
 [pep8]: http://www.python.org/dev/peps/pep-0008/#code-lay-out
+[linus_indent]: http://en.wikiquote.org/wiki/Linus_Torvalds#1995
 [whitespace]: http://stackoverflow.com/q/729692/508684
