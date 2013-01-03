@@ -163,11 +163,11 @@ En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
     #nav .contact { background-position: 0 -64px; }
     #nav .blog    { background-position: 0 -96px; }
 
+<!--
 ## Orden de las propiedades
 
 (Hablar de esto con Victor, que es el que lo tiene controlado).
 
-<!--
 Dentro del bloque las propiedades deben seguir este orden
 
     #orden {
