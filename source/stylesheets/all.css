@@ -32,7 +32,7 @@ p {
 }
 
 pre, code, kbd, samp {
-  font: 12px 'Menlo', 'Consolas', 'Bitstream Vera Sans mono', monospace;
+  font: 13px 'PragmataPro', 'Consolas', 'Menlo', 'Bitstream Vera Sans mono', monospace;
   background: #fff;
   padding: 2px 5px;
   border: 1px solid #ccc;
