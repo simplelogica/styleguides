@@ -28,7 +28,6 @@ SASS, etc.) se va anidando la identación.
       }
     }
 
-
 ## Sintáxis
 
 La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el
@@ -41,7 +40,7 @@ Dejamos un espacio entre los dos puntos <kbd>:</kbd> de una propiedad y su valor
 
 Siempre ponemos el punto y coma <kbd>;</kbd> de cierre, incluso en la última linea.
 
-Este bloque da una idea de cómo tiene que quedar
+Este bloque da una idea de cómo tiene que verse el código:
 
     .wide-box {
       width: 100px;
