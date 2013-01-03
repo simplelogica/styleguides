@@ -53,6 +53,39 @@ Este bloque da una idea de cómo tiene que verse el código:
       top: 0;
     }
 
+## Nombres de los selectores
+
+Ver la [guía general](/guides/general.html#nombres_de_identificadores).
+
+Es preferible que los nombres indiquen a qué estan dando estilos, mejor que el estilo que dan:
+
+    /* Describe cómo es el botón, no lo que hace */
+    .red-button {
+      ...
+    }
+
+    /*
+     * Descríbe el típo de botón, no cómo es visualmente.
+     * Si en el futuro los botones de acción principal son azules en vez de rojos no tendremos
+     * problema.
+     */
+    .main-button {
+      ...
+    }
+
+Si en el futuro los botones de acción principal son azules tenemos un problema
+
+Los espacios se sustituirán por guiones <kbd>-</kbd>. Nada de caracteres de subrayado <kbd>_</kbd> o
+camelCase.
+
+    #noEscribiremosAsi { }
+    #asi_tampoco { }
+    #mucho-mejor { }
+
+La razón de esto es que Internet Explorer crea una [variable global][IE_globals] con el mismo nombre
+que el ID de los elementos. Como un <kbd>-</kbd> no es válido dentro de un identificador en
+Javascript evitamos que cree dichas variables y nos ahorramos dolores de cabeza.
+
 ## Múltiples selectores
 
 <!-- No estoy del todo convencido con esto -->
@@ -141,42 +174,6 @@ Dentro del bloque las propiedades deben seguir este orden
       ...
     }
 -->
-
-## Nombres de los selectores
-
-Ver la [guía general](/guides/general.html#nombres_de_identificadores).
-
-Es preferible que los nombres indiquen a qué estan dando estilos, mejor que el estilo que dan:
-
-    /* Describe cómo es el botón, no lo que hace */
-    .red-button {
-      ...
-    }
-
-    /*
-     * Descríbe el típo de botón, no cómo es visualmente.
-     * Si en el futuro los botones de acción principal son azules en vez de rojos no tendremos
-     * problema.
-     */
-    .main-button {
-      ...
-    }
-
-Si en el futuro los botones de acción principal son azules tenemos un problema
-
-Los espacios se sustituirán por guiones <kbd>-</kbd>. Nada de caracteres de subrayado <kbd>_</kbd> o
-camelCase.
-
-    #noEscribiremosAsi { }
-    #asi_tampoco { }
-    #mucho-mejor { }
-
-La razón de esto es que Internet Explorer crea una [variable global][IE_globals] con el mismo nombre
-que el ID de los elementos. Como un <kbd>-</kbd> no es válido dentro de un identificador en
-Javascript evitamos que cree dichas variables y nos ahorramos dolores de cabeza.
-
-La otra razón es que te ahorras pulsar la tecla de mayusculas. ¡Una pulsación ahorrada es un
-caracter más en el código!
 
 ## Especificidad
 
