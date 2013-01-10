@@ -235,6 +235,8 @@ Si nos decidimos por `em` hay que poner un valor por defecto que nos mantenga cu
 
 ## Reset de estilos
 
+[Este][base_css]. [Razón aquí][saner_reset].
+
 <!-- Tengo claro que el reset de [Eric Meyer](http://meyerweb.com/eric/tools/css/reset/index.html),
 o el clásico `* { margin:0; padding:0; }` no. Las opciones que nos quedan son:
 
@@ -313,4 +315,6 @@ dos fuentes de sistema en el valor de `font-family`, terminando la familia gené
 [css_utf8]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
 [mdn_css_efficiency]: https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS#Avoid_the_descendant_selector.21
+[base_css]: https://github.com/afgomez/base.css
+[saner_reset]: http://afgomez.es/blog/a-saner-reset-stylesheet/
 [FF_Gen]: http://www.fontsquirrel.com/fontface/generator
