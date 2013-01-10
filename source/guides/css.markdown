@@ -235,7 +235,7 @@ Si nos decidimos por `em` hay que poner un valor por defecto que nos mantenga cu
 
 ## Reset de estilos
 
-[Este][base_css]. [Razón aquí][saner_reset].
+[Éste][base_css]. [Razón aquí][saner_reset].
 
 <!-- Tengo claro que el reset de [Eric Meyer](http://meyerweb.com/eric/tools/css/reset/index.html),
 o el clásico `* { margin:0; padding:0; }` no. Las opciones que nos quedan son:
