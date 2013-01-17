@@ -1,6 +1,6 @@
 # Guía de estilos de Simplelogica
 
-...o cómo escribimos la mágia.
+...o cómo escribimos la magia.
 
 Esto es un proyecto de [Middleman](http://middlemanapp.com). Para montarla, clonar el proyecto y
 
