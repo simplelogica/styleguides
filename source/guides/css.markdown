@@ -3,15 +3,15 @@ nav_title: SASS/CSS
 title: Hojas de estilo (SASS/CSS)
 ---
 
-## Codificación e identado
+## Codificación e indentado
 
 Ver las [consideraciones generales](/guides/general.html).
 
 No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores
 [asumen utf8][css_utf8].
 
-Los bloques se identan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en
-SASS, etc.) se va anidando la identación.
+Los bloques se indentan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en
+SASS, etc.) se va anidando la indentación.
 
     #por-favor-no-hagas-esto {
     width: 100px;
@@ -33,7 +33,7 @@ SASS, etc.) se va anidando la identación.
 La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el
 mismo.
 
-La llave de cierre <kbd>}</kbd> se pone en su propia linea, identada con el selector. Dejamos un
+La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada con el selector. Dejamos un
 espacio en blanco entre la llave de cierre y el siguiente selector
 
 Dejamos un espacio entre los dos puntos <kbd>:</kbd> de una propiedad y su valor.

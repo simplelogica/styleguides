@@ -20,21 +20,21 @@ un BOM [rompe Internet Explorer][ie_bom].
 
 Casi todos usamos Mac o Linux, así que el fin de linea debe ser el de UNIX (LF)
 
-## Identado
+## Indentado
 
 Dos espacios. No parece haber un estándar para Javascript/HTML/CSS en esto, así que heredamos el de
-Ruby/Rails. Además, al usar espacios se mantiene la identación al ver el código fuente en otras
+Ruby/Rails. Además, al usar espacios se mantiene la indentación al ver el código fuente en otras
 partes (navegador, diffs, etc.).
 
 Si puntualmente hay que usar un lenguaje con otras reglas aceptadas (como Python)
 [se usarán las del lenguaje][pep8].
 
-Si necesitas más de tres niveles de identación [seguramente tienes un problema][linus_indent].
+Si necesitas más de tres niveles de indentación [seguramente tienes un problema][linus_indent].
 
 ## Espacios en blanco
 
 Los espacios en blanco al final de linea los quitamos. No aportan nada y manchan los diffs. Las
-lineas en blanco no se identan por la misma razón.
+lineas en blanco no se indentan por la misma razón.
 
 Es preferible que los ficheros [terminen con un caracter de fin de linea][whitespace].
 
