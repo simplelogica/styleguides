@@ -3,7 +3,7 @@ nav_title: HTML
 title: Marcado (HTML)
 ---
 
-## Codificación e identado
+## Codificación e indentado
 
 Ver las [consideraciones generales](/guides/general.html).
 
@@ -39,7 +39,7 @@ Es recomendable cerrar siempre las etiquetas, incluso las opcionales.
 Hay varias razones para esto:
 
 - Tiene sentido. Si abres algo lo cierras cuando terminas de usarlo, ¿no?
-- Generalmente los editores se vuelven un poco locos al reidentar automáticamente el primer bloque.
+- Generalmente los editores se vuelven un poco locos al reindentar automáticamente el primer bloque.
 - También se vuelven locos en los comandos tipo "Close tag".
 - ¿Quien se acuerda de cuando es opcional y cuando no? Cerramos todo y nos evitamos problemas.
 
