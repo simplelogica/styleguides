@@ -52,7 +52,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # Live reload
-activate :livereload
+# activate :livereload
 
 # Build-specific configuration
 configure :build do
