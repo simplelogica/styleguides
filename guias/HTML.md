@@ -1,7 +1,10 @@
 ---
-nav_title: HTML
+layout: default
 title: Marcado (HTML)
+slug: html
 ---
+
+# Marcado (HTML)
 
 ## Codificación e indentado
 

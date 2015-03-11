@@ -1,9 +1,0 @@
-<ul>
-  <li><%= link_to 'Índice', '/' %>
-  <% guides.each do |guide| %>
-    <li>
-      <%= link_to guide[:title], guide[:path],
-                  class: current_page?(guide[:path]) ? 'current' : nil %>
-    </li>
-  <% end %>
-</ul>

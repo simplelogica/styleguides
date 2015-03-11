@@ -1,7 +1,10 @@
 ---
-nav_title: Javascript
+layout: default
 title: Javascript
+slug: js
 ---
+
+# Javascript
 
 ## Codificación e indentado
 

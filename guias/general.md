@@ -1,7 +1,10 @@
 ---
-nav_title: General
+layout: default
 title: Consideraciones generales
+slug: general
 ---
+
+#Consideraciones generales
 
 La regla de oro es **ser consistente**. Cuando modifiques código en un fichero existente echa un
 vistazo alrededor, mira como está hecho y hazlo igual. Dentro del mismo fichero, es mejor un mal

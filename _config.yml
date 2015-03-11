@@ -1,0 +1,15 @@
+# Site settings
+title: Simplelógica
+email: remembermyname@simplelogica.net
+description: >
+  La web 3.0 será con palos y piedras
+baseurl: ""
+url: "http://styleguides.simplelogica.net"
+
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+fenced_code_blocks: true
+redcarpet:
+ extensions: ["fenced_code_blocks", "tables"]
+github: [Repository metadata]

@@ -1,0 +1,16 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+$bg: #F5F5F5;
+$link: #F05927;
+$text: #454343;
+$dark: #1E1D1D;
+
+@import "normalize";
+@import "base";
+@import "typography";
+@import "syntax";
+@import "menu";
