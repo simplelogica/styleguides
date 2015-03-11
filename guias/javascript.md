@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Javascript
-slug: js
+slug: javascript
 ---
 
 # Javascript
