@@ -18,35 +18,39 @@ La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada al mismo n
 
 Los punto y coma `;` los ponemos siempre. [Google][Google_ASI] lo explica estupendamente.
 
-Mejor comillas simples `'` que dobles `"`. En HTML usamos comillas dobles, y si usamos comillas simples no es necesario escapar las del HTML
+Mejor comillas simples `'` que dobles `"`. En HTML usamos comillas dobles, y si usamos comillas simples no es necesario escapar las del
 
-    var html;
+```js
+var html;
 
-    // Booo
-    html = "<span class=\"wadus\">...</span>";
+// Booo
+html = "<span class=\"wadus\">...</span>";
 
-    // Yeah!
-    html = '<span class="wadus">...</span>';
+// Yeah!
+html = '<span class="wadus">...</span>';
+```
 
 En cuanto espacios en blanco entre operadores, parentesis, etc, ver las [consideraciones
 generales][general_whitespace].
 
 Este bloque da una idea de cómo debería verse el código:
 
-    function foo(bar) {
-      "use strict";
+```js
+function foo(bar) {
+  "use strict";
 
-      var baz = 3;
+  var baz = 3;
 
-      if (bar == baz) {
-        return $('<span class="wadus">Igual!</span>');
-      } else if (bar < baz) {
-        return $('<span class="wadus">Menor!</span>');
-      } else {
-        return $('<span class="wadus">Mayor!</span>');
-      }
+  if (bar == baz) {
+    return $('<span class="wadus">Igual!</span>');
+  } else if (bar < baz) {
+    return $('<span class="wadus">Menor!</span>');
+  } else {
+    return $('<span class="wadus">Mayor!</span>');
+  }
 
-    }
+}
+```
 
 ## Nombres de los identificadores
 
@@ -70,48 +74,58 @@ jQuery (pero ¿qué proyectos son esos?).
 Usamos literales en vez de constructores para tipos nativos ya que dan menos problemas. Por ejemplo
 este código:
 
-    var x = new Boolean(false);
-    if (x) {
-      alert('Hola!');
-    }
+```js
+var x = new Boolean(false);
+if (x) {
+  alert('Hola!');
+}
+```
 
 Es contraintuitivo. `new Boolean` devuelve un objeto, que siempre va a evaluar a `true`.
 
 Usar _type casting_ está permitido
 
-    var x = Boolean(0);
-    if (x) {
-      alert('Nadie me verá nunca!');
-    }
+```js
+var x = Boolean(0);
+if (x) {
+  alert('Nadie me verá nunca!');
+}
+```
 
 El constructor de Arrays es más problemático. En este código:
 
-    var a = 4,
-        b = 2;
+```js
+var a = 4,
+    b = 2;
 
-    var arr1 = new Array(a, b); // [4, 2]
-    var arr2 = new Array(a);    // [undefined, undefined, undefined, undefined]
+var arr1 = new Array(a, b); // [4, 2]
+var arr2 = new Array(a);    // [undefined, undefined, undefined, undefined]
+```
 
 El constructor funciona de manera distinta dependiendo del número de parametros. Al usar literales
 no hay problemas:
 
-    var arr1 = [a, b]; // [4, 2]
-    var arr2 = [a];    // [4]
+```js
+var arr1 = [a, b]; // [4, 2]
+var arr2 = [a];    // [4]
+```
 
 El constructor de objetos no tiene estos problemas, pero es más cómodo añadir propiedades:
 
-    var o = new Object();
-    o.a = 0;
-    o.b = 1;
-    o.c = 2;
-    o['strange key'] = 3;
+```js
+  var o = new Object();
+  o.a = 0;
+  o.b = 1;
+  o.c = 2;
+  o['strange key'] = 3;
 
-    var o2 = {
-      a: 0,
-      b: 1,
-      c: 2,
-      'strange key': 3
-    };
+  var o2 = {
+    a: 0,
+    b: 1,
+    c: 2,
+    'strange key': 3
+  };
+```
 
 <!--
 ## Documentación y comentarios
@@ -134,8 +148,9 @@ En ficheros ya existentes para proyectos en mantenimiento evaluaremos si merece 
 mucho tiempo (mas de 20 minutos) adaptarlo a modo estricto ponemos al principio del fichero el
 siguiente comentario para que JSHint no se queje.
 
-    /*jshint strict:false */
-
+```js
+/*jshint strict:false */
+```
 ## JSHint
 
 Si, siempe, en ficheros antiguos y nuevos. Si hay errores en ficheros antiguos se arreglan. Cómo se
@@ -144,29 +159,29 @@ ayuda a capturar errores durante el desarrollo.
 
 El .jshintrc base que debe usarse es este:
 
-    {
-      "browser"  : true,      // Asume browser globals (window, document...)
-      "jquery"   : true,      // Asume jQuery globals
-      "devel"    : false,     // Warn about console calls
-      "curly"    : true,      // Always require curly braces in `if` and `while` blocks
-      "forin"    : true,      // Require hasOwnProperty inside for..in loops
-      "latedef"  : true,      // Avoid hoisting problems
-      "maxdepth" : 3,         // http://news.ycombinator.com/item?id=3414637
-      "newcap"   : true,      // Capitalize constructor functions
-      "noarg"    : true,      // Don't use arguments.callee. It's deprecated so you should
-                              // not use it anyway
-      "noempty"  : true,      // Don't allow empty blocks
-      "quotmark" : "single",  // Use single quotes only
-      "strict"   : true,      // Require strict mode
-      "trailing" : true,      // Warn about trailing whitespace
-      "undef"    : true,      // Don't use undeclared variables (avoid splicit globals)
-      "unused"   : true       // Warn about unused variables
-    }
+```js
+{
+  "browser"  : true,      // Asume browser globals (window, document...)
+  "jquery"   : true,      // Asume jQuery globals
+  "devel"    : false,     // Warn about console calls
+  "curly"    : true,      // Always require curly braces in `if` and `while` blocks
+  "forin"    : true,      // Require hasOwnProperty inside for..in loops
+  "latedef"  : true,      // Avoid hoisting problems
+  "maxdepth" : 3,         // http://news.ycombinator.com/item?id=3414637
+  "newcap"   : true,      // Capitalize constructor functions
+  "noarg"    : true,      // Don't use arguments.callee. It's deprecated so you should
+                          // not use it anyway
+  "noempty"  : true,      // Don't allow empty blocks
+  "quotmark" : "single",  // Use single quotes only
+  "strict"   : true,      // Require strict mode
+  "trailing" : true,      // Warn about trailing whitespace
+  "undef"    : true,      // Don't use undeclared variables (avoid splicit globals)
+  "unused"   : true       // Warn about unused variables
+}
+```
 
 En el hipotetico caso de que hagamos algo con otra plataforma que no sea un navegador o usemos otra
 librería que no sea jQuery en algún proyecto lo cambiaremos sólo en ese proyecto.
-
-
 
 [google_asi]: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Semicolons#Semicolons
 [general_whitespace]: /guides/general.html#espacios_en_blanco

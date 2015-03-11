@@ -13,7 +13,9 @@ Ver las [consideraciones generales](/guides/general.html).
 Meteremos un `<meta>` con la codificación del fichero. Normalmente es apache/nginx quien se encarga
 de especificar la codificación en las cabeceras pero no siempre podemos controlar esto.
 
-    <meta charset="utf8">
+```html
+<meta charset="utf8">
+```
 
 ## Tags
 
@@ -21,23 +23,25 @@ En minusculas nos gustan más.
 
 Es recomendable cerrar siempre las etiquetas, incluso las opcionales.
 
-    <!-- Meh... -->
-    <p>Lorem ipsum dolor sit amet
+```html
+<!-- Meh... -->
+<p>Lorem ipsum dolor sit amet
 
-    <ul>
-      <li>First item
-      <li>Second item
-      <li>Third item
-    </ul>
+<ul>
+  <li>First item
+  <li>Second item
+  <li>Third item
+</ul>
 
-    <!-- Bondad! -->
-    <p>Lorem ipsum dolor sit amet</p>
+<!-- Bondad! -->
+<p>Lorem ipsum dolor sit amet</p>
 
-    <ul>
-      <li>First item</li>
-      <li>Second item</li>
-      <li>Third item</li>
-    </ul>
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ul>
+```
 
 Hay varias razones para esto:
 
@@ -63,4 +67,6 @@ Siempre debe de haber un `DOCTYPE`. Evitaremos a toda costa que el navegador ent
 
 En proyectos nuevos usaremos el `DOCTYPE` de HTML5. En ya existentes dejaremos el que esté.
 
-    <!DOCTYPE html>
+```html
+<!DOCTYPE html>
+```

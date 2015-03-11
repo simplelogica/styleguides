@@ -16,20 +16,22 @@ No es necesario incluir un `@charset` al principio del fichero. Si no se indica 
 Los bloques se indentan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en
 SASS, etc.) se va anidando la indentación.
 
-    #por-favor-no-hagas-esto {
-    width: 100px;
-    height: 100px;
-    }
+```scss
+#por-favor-no-hagas-esto {
+width: 100px;
+height: 100px;
+}
 
-    #mejor-asi {
-      width: 100px;
-      height: 100px;
+#mejor-asi {
+  width: 100px;
+  height: 100px;
 
-      &.con-sass {
-        width: 200px;
-        height: 50px;
-      }
-    }
+  &.con-sass {
+    width: 200px;
+    height: 50px;
+  }
+}
+```
 
 ## Sintáxis
 
@@ -45,16 +47,18 @@ Siempre ponemos el punto y coma <kbd>;</kbd> de cierre, incluso en la última li
 
 Este bloque da una idea de cómo tiene que verse el código:
 
-    .wide-box {
-      width: 100px;
-      height: 20px;
-    }
+```scss
+.wide-box {
+  width: 100px;
+  height: 20px;
+}
 
-    #sidebar {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+#sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+```
 
 ## Nombres de los selectores
 
@@ -62,28 +66,32 @@ Ver la [guía general](/guides/general.html#nombres_de_identificadores).
 
 Es preferible que los nombres indiquen a qué estan dando estilos, mejor que el estilo que dan:
 
-    /* Describe cómo es el botón, no lo que hace */
-    .red-button {
-      ...
-    }
+```scss
+/* Describe cómo es el botón, no lo que hace */
+.red-button {
+  ...
+}
 
-    /*
-     * Descríbe el típo de botón, no cómo es visualmente.
-     * Si en el futuro los botones de acción principal son azules en vez de rojos no tendremos
-     * problema.
-     */
-    .main-button {
-      ...
-    }
+/*
+ * Descríbe el típo de botón, no cómo es visualmente.
+ * Si en el futuro los botones de acción principal son azules en vez de rojos no tendremos
+ * problema.
+ */
+.main-button {
+  ...
+}
+```
 
 Si en el futuro los botones de acción principal son azules tenemos un problema
 
 Los espacios se sustituirán por guiones <kbd>-</kbd>. Nada de caracteres de subrayado <kbd>_</kbd> o
 camelCase.
 
-    #noEscribiremosAsi { }
-    #asi_tampoco { }
-    #mucho-mejor { }
+```scss
+#noEscribiremosAsi { }
+#asi_tampoco { }
+#mucho-mejor { }
+```
 
 La razón de esto es que Internet Explorer crea una [variable global][IE_globals] con el mismo nombre
 que el ID de los elementos. Como un <kbd>-</kbd> no es válido dentro de un identificador en
@@ -97,54 +105,60 @@ entre la coma <kbd>,</kbd> y el siguiente selector. Si son largos en lineas a pa
 
 Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la legibilidad.
 
-    .pre, .code {
-      font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
-    }
+```scss
+.pre, .code {
+  font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
+}
 
-    body#home #content .separator p span,
-    body#home #content .separator .wadus span {
-      /*
-       * Si tienes un selector así el menor de tus problemas
-       * es si lo pones en una linea a parte o no.
-       */
-    }
+body#home #content .separator p span,
+body#home #content .separator .wadus span {
+  /*
+   * Si tienes un selector así el menor de tus problemas
+   * es si lo pones en una linea a parte o no.
+   */
+}
+```
 
 ## Propiedades
 
 Usaremos las propiedades _shorthand_ cuando tenga sentido.
 
-    /* Meh... */
-    body {
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
+```scss
+/* Meh... */
+body {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 
-    /* Aún lo podemos mejorar... */
-    body {
-      margin: 10px 10px 10px 10px;
-    }
+/* Aún lo podemos mejorar... */
+body {
+  margin: 10px 10px 10px 10px;
+}
 
-    /* Perfecto */
-    body {
-      margin: 10px;
-    }
+/* Perfecto */
+body {
+  margin: 10px;
+}
+```
 
 
 ## Colocación de las propiedades
 
 Ponemos una propiedad por linea
 
-    /* Esto es feo */
-    .class { width: 100px; height: 20px; font-size: 1.4em Arial, Helvetica, sans-serif; }
+```scss
+/* Esto es feo */
+.class { width: 100px; height: 20px; font-size: 1.4em Arial, Helvetica, sans-serif; }
 
-    /* Esto mucho mejor */
-    .class {
-      width: 100px;
-      height: 20px;
-      font: 1.4em Arial, Helvetica, sans-serif;
-    }
+/* Esto mucho mejor */
+.class {
+  width: 100px;
+  height: 20px;
+  font: 1.4em Arial, Helvetica, sans-serif;
+}
+```
 
 Si tenemos varios selectores que vayan variando la misma propiedad en el mismo elemento (un
 `background-position` por ejemplo) podemos saltarnos esta regla. Poner las propiedades en una linea
@@ -152,56 +166,50 @@ permite juntar los selectores y asociarlos al elemento que están modificando.
 
 En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
 
-    /*
-     * Tenemos un icono en cada elemento de una lista de navegación
-     *
-     * Ponemos el fondo en el <li> genérico y alteramos el background-position
-     * en cada elemento
-     */
-    #nav li {
-      background: url(/images/sprite-nav.png) no-repeat 0 0;
-    }
-    #nav .home    { background-position: 0 0; }
-    #nav .about   { background-position: 0 -32px; }
-    #nav .contact { background-position: 0 -64px; }
-    #nav .blog    { background-position: 0 -96px; }
-
-<!--
-## Orden de las propiedades
-
-(Hablar de esto con Victor, que es el que lo tiene controlado).
-
-Dentro del bloque las propiedades deben seguir este orden
-
-    #orden {
-      ...
-    }
--->
+```scss
+/*
+ * Tenemos un icono en cada elemento de una lista de navegación
+ *
+ * Ponemos el fondo en el <li> genérico y alteramos el background-position
+ * en cada elemento
+ */
+#nav li {
+  background: url(/images/sprite-nav.png) no-repeat 0 0;
+}
+#nav .home    { background-position: 0 0; }
+#nav .about   { background-position: 0 -32px; }
+#nav .contact { background-position: 0 -64px; }
+#nav .blog    { background-position: 0 -96px; }
+```
 
 ## Especificidad
 
 La necesaria. Si hay más de tres niveles suele indicar un problema y conviene refactorizar. Por
 ejemplo, para el siguiente HTML:
 
-    <nav id="main">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/blog/">Nuestras diatrivas</a></li>
-        <li><a href="/contacto">Dejanos una postal</a></li>
-      </ul>
-    </nav>
+```scss
+<nav id="main">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Nuestras diatrivas</a></li>
+    <li><a href="/contacto">Dejanos una postal</a></li>
+  </ul>
+</nav>
+```
 
 Si queremos dar estilo a los enlaces usaremos la mínima especificidad necesaria.
 
-    /* Con esto haceis llorar a Bert Bos. */
-    #main ul li a {
-      ...
-    }
+```scss
+/* Con esto haceis llorar a Bert Bos. */
+#main ul li a {
+  ...
+}
 
-    /* Mejor así. */
-    #main a {
-      ...
-    }
+/* Mejor así. */
+#main a {
+  ...
+}
+```
 
 Es innecesario y [lento][mdn_css_Efficiency]. Además si en el futuro queremos dar un estilo
 diferente a uno de los enlaces tenemos menos especificidad que sobreescribir.
@@ -210,15 +218,17 @@ diferente a uno de los enlaces tenemos menos especificidad que sobreescribir.
 
 Hexadecimal es preferido. Usaremos la sintáxis compacta cuando sea posible.
 
-    /* Meh... */
-    a {
-      color: #006699;
-    }
+```scss
+/* Meh... */
+a {
+  color: #006699;
+}
 
-    /* Mejor */
-    a {
-      color: #069;
-    }
+/* Mejor */
+a {
+  color: #069;
+}
+```
 
 ## Unidades, dimensiones, etc.
 
@@ -227,32 +237,9 @@ Si algo tiene valor `0` quitamos la unidad.
 Para las dimensiones de las cajas preferimos usar `px` ya que nos dan mayor control. Para sitios en
 responsive evaluaremos el uso de `%` donde pueda tener sentido.
 
-<!--
-
-Fuentes: ¿`px` o `em`? Usar `em` viene de los tiempos de cuando IE6 no podía redimensionar texto si estaba en `px` pero a día de hoy todos los navegadores hacen zoom de modo decente.
-Por ejemplo, [github](https://github.com/styleguide/css) usa `px`.
-
-Si nos decidimos por `em` hay que poner un valor por defecto que nos mantenga cuerdos (1em = 10px).
-
--->
-
 ## Reset de estilos
 
 [Éste][base_css]. [Razón aquí][saner_reset].
-
-<!-- Tengo claro que el reset de [Eric Meyer](http://meyerweb.com/eric/tools/css/reset/index.html),
-o el clásico `* { margin:0; padding:0; }` no. Las opciones que nos quedan son:
-
-- Usar [Normalize](http://necolas.github.com/normalize.css/) tal cual está (lo estoy usando en esta
-  guía).
-- Crear uno propio al estilo de lo que [ya tengo hecho](https://github.com/afgomez/base.css).
-- Hacer un fork de normalizer y adaptar lo que no nos guste.
-
-¿Qué reseteamos por defecto? ¿Fuentes y márgenes de <p> <ul> y amigos? ¿Tiene sentido? Si no se
-resetea hay que acordarse de ponerlo a 0 en listas de navegacion y cosas así pero si se resetea,
-crear estilos por defecto para texto de contenido es un poco coñazo.
-
--->
 
 
 ## Fuentes
@@ -263,55 +250,60 @@ Si la fuente está en Google Web Fonts la cogemos de ahí. Si no, solemos usar [
 para generar los `@font-face`, aunque hay que retocar un poco el CSS que genera. Por ejemplo, en
 este CSS:
 
-    @font-face {
-      font-family: 'ArvoRegular';
-      src: ...;
-      font-weight: normal;
-      font-style: normal
-    }
+```scss
+@font-face {
+  font-family: 'ArvoRegular';
+  src: ...;
+  font-weight: normal;
+  font-style: normal
+}
 
-    @font-face {
-      font-family: 'ArvoBold';
-      src: ...;
-      font-weight: normal;
-      font-style: normal
-    }
+@font-face {
+  font-family: 'ArvoBold';
+  src: ...;
+  font-weight: normal;
+  font-style: normal
+}
+```
 
 Hay que poner el mismo `font-family` en las dos declaraciones y cambiar el `font-weight` en la
 segunda.
 
-    @font-face {
-      font-family: 'Arvo';
-      src: ...;
-      font-weight: normal;
-      font-style: normal
-    }
+```scss
+@font-face {
+  font-family: 'Arvo';
+  src: ...;
+  font-weight: normal;
+  font-style: normal
+}
 
-    @font-face {
-      font-family: 'Arvo';
-      src: ...;
-      font-weight: bold;
-      font-style: normal
-    }
-
+@font-face {
+  font-family: 'Arvo';
+  src: ...;
+  font-weight: bold;
+  font-style: normal
+}
+```
 
 Aunque el soporte para `@font-face` es bastante bueno (incluso IE6) conviene siempre añadir una o
 dos fuentes de sistema en el valor de `font-family`, terminando la familia genérica que corresponda.
 
-    /* http://www.google.com/webfonts/specimen/Petrona */
-    h1 {
-      font-family: Petrona, Georgia, serif;
-    }
+```scss
+/* http://www.google.com/webfonts/specimen/Petrona */
+h1 {
+  font-family: Petrona, Georgia, serif;
+}
 
-    /* http://www.google.com/webfonts/specimen/Open+Sans */
-    p {
-      font-family: 'Open sans', Arial, sans-serif;
-    }
+/* http://www.google.com/webfonts/specimen/Open+Sans */
+p {
+  font-family: 'Open sans', Arial, sans-serif;
+}
 
-    /* http://www.google.com/webfonts/specimen/Inconsolata */
-    pre, code {
-      font-family: Inconsolata, Consolas, 'Ubuntu Mono',monospace;
-    }
+/* http://www.google.com/webfonts/specimen/Inconsolata */
+pre, code {
+  font-family: Inconsolata, Consolas, 'Ubuntu Mono',monospace;
+}
+```
 
 
 
