@@ -24,11 +24,11 @@ Antes de ponernos a trabajar con ningún repositorio, debemos de configurar las 
   $ git config --global branch.autosetuprebase always
   ```
 
-Con **_merge.ff false_**, hacemos que todos los _merges_ sean --no-ff, es decir que siempre se genere un nuevo commit al hacer un merge. Por defecto los commits en git son fast-forward, es decir, que si no tienen la necesidad crear un nuevo commit dejarán las cabezas de las dos ramas a mergear en el mismo punto, dejando la rama mas limpia, pero la historia menos descriptiva. Nosotros preferimos optar por tener toda la información posible en la historia, así podremos ver de que rama estaba viniendo un commit.
+Con **_merge.ff false_**, hacemos que todos los _merges_ sean --no-ff, es decir que siempre se genere un nuevo commit al hacer un merge. Por defecto los commits en Git son fast-forward, es decir, que si no tienen la necesidad crear un nuevo commit dejarán las cabezas de las dos ramas a mergear en el mismo punto, dejando la rama mas limpia, pero la historia menos descriptiva. Nosotros preferimos optar por tener toda la información posible en la historia, así podremos ver de que rama estaba viniendo un commit.
 
 Con **_branch.autosetuprebase always_** forzamos que el comando **git pull** haga siempre un **rebase** para actualizar las ramas remotas con las locales. Al tener el merge como no-ff, siempre nos dejaría un commit al hacer pull, y en este caso no aporta nada a la historia global del repositorio.
 
-**NOTA:** mucho ojo si ya has empezado a trabajar con git y activas el autorebase posteriormente. Esta opción añade la opción cundo se crea una rama, por lo que las ramas ya creadas anteriormente no la tendrán. Para añadirla, edita el fichero **.git/config** del proyecto en cuestion y añade **rebase = true** en las ramas que no lo tengan. Por ejemplo:
+**NOTA:** mucho ojo si ya has empezado a trabajar con Git y activas el autorebase posteriormente. Esta opción añade la opción cundo se crea una rama, por lo que las ramas ya creadas anteriormente no la tendrán. Para añadirla, edita el fichero **.git/config** del proyecto en cuestion y añade **rebase = true** en las ramas que no lo tengan. Por ejemplo:
 
   ```bash
   [branch "master"]
@@ -43,7 +43,7 @@ Con **_branch.autosetuprebase always_** forzamos que el comando **git pull** hag
 
 * Usa **guiones** para separar palabras.
 
-* Usa nombre **cortos** y **descriptivos**:
+* Usa nombres **cortos** y **descriptivos**:
 
   ```bash
   # bien
@@ -78,7 +78,7 @@ Con **_branch.autosetuprebase always_** forzamos que el comando **git pull** hag
   $ git checkout -b feature-redesign/front
   ```
 
-* Cuidado con crear múltiples anidaciones ya que puede bloquear ramas. Si existe la rama **feature/oauth-migration** y se crea la rama **feature/oauth-migration/front**, la primera será un directorio para git y no se podrá hacer checkout a ella.
+* Cuidado con crear múltiples anidaciones ya que puede bloquear ramas. Si existe la rama **feature/oauth-migration** y se crea la rama **feature/oauth-migration/front**, la primera será un directorio para Git y no se podrá hacer checkout a ella.
 
 * Borra tus ramas personales en local y del repositorio remoto cuando acabes de trabajar en una tarea y ya esté mergeada a master, a no ser que exista alguna razón para mantenerla. Mantengamos los repositorios limpios, ¿acaso no borras tus ramas en casa?
 
@@ -191,7 +191,7 @@ En caso de no poder pushear una rama porque nos olvidamos de actualizar antes de
   $ git push
   ```
 
-Manten el repositorio (local y remoteo) limpo, ejecuta comandos de mantenimiento cada cierto tiempo::
+Manten el repositorio (local y remoto) limpo, ejecuta comandos de mantenimiento cada cierto tiempo::
 
 * [`git-gc(1)`](http://git-scm.com/docs/git-gc)
 * [`git-prune(1)`](http://git-scm.com/docs/git-prune)
@@ -209,4 +209,4 @@ Manten el repositorio (local y remoteo) limpo, ejecuta comandos de mantenimiento
 
 # Créditos
 
-Esta guía está basada en nuestro propio uso de git, las recomendaciones de http://git-scm.com/book/es/v2 y https://github.com/agis-/git-style-guide.
+Esta guía está basada en nuestro propio uso de Git, las recomendaciones de [Git](http://git-scm.com/book/es/v2) y [esta guía](https://github.com/agis-/git-style-guide).
