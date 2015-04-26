@@ -86,7 +86,7 @@ brew link libxml2 --force
 bundle config build.nokogiri --use-system-libraries
 ````
 
-**rmagick** suele fallar por la versión de imagemagick, sirve cualquier versión, actualmente a mi me funcina con la 6.9.0, solo hay que hacer un par de enlaces simbólicos.
+**rmagick** suele fallar por la nomenclatura de las librerías de versión nuevas de imagemagick, actualmente a mi me funciona bien la versión `6.9.0` con proyectos bastante viejos, solo hay que hacer un par de enlaces simbólicos.
 
 ````
 brew install imagemagick
@@ -96,7 +96,7 @@ ln -s libMagickCore-Q16.dylib libMagickCore.dylib
 ln -s libMagickWand-Q16.dylib libMagickWand.dylib
 ````
 
-**libv8** dependiendo de la versión tiene problemas para compilar, se recomienda actualizar, si no es una opción, nuevamente hay que tirar de homebrew.
+**libv8** dependiendo de la versión tiene problemas para compilar, se recomienda actualizar, si no es una opción, nuevamente hay que tirar de homebrew. Versiones anteriores a `3.16.14.7` suelen dar problemas, se recomienda actualizar en cualquier caso.
 
 ````
 brew install v8
