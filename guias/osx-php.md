@@ -21,9 +21,10 @@ brew link icu4c
 Básicamente es seguir los pasos indicados en la documentación de [PHPBrew](http://phpbrew.github.io/phpbrew/) teniendo en cuenta las configuraciones específicas para homebrew. A continuación pongo exactamente el extracto utilizado.
 
 ````
+cd ~/
 curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
 chmod +x phpbrew
-sudo mv phpbrew /usr/bin/phpbrew
+sudo mv phpbrew /usr/local/bin/phpbrew
 ````
 
 ````
