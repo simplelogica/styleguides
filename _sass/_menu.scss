@@ -1,31 +1,54 @@
 .site-header {
   background: $dark;
   position: fixed;
-  padding: 15px;
   width: 250px;
   left: 0;
   top: 0;
   bottom: 0;
+  .logo {
+    display: block;
+    width: 170px;
+    height: 40px;
+    margin: 20px;
+    background: url('/images/logo.png') no-repeat 0 0;
+    font: 0/0 a;
+  }
 }
 
-.site-nav ul {
-  margin: 10px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.site-nav li {
-  font-size: 18px;
-  margin: 0;
-  border-bottom: 1px solid #333;
-}
-
-.site-nav a {
-  display:block;
-  padding: 6px 10px;
-  text-decoration: none;
-  color: #ccc;
-}
-.site-nav .active {
-  color: #fff;
-  font-weight: bold;
+.site-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    margin: 0;
+  }
+  h3 {
+    background: #0E0D0D;
+    color: #999;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px 20px;
+    margin: 10px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  a {
+    font-size: 14px;
+    display: block;
+    line-height: 1.35;
+    padding: 8px 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #999;
+  }
+  .active {
+    color: $border;
+    font-weight: 400;
+    &:after {
+      content: ' ~';
+    }
+  }
 }
