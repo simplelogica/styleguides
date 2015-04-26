@@ -102,3 +102,5 @@ ln -s libMagickWand-Q16.dylib libMagickWand.dylib
 brew install v8
 bundle config build.libv8 --with-system-v8
 ````
+
+**therubyracer** versiones anteriores a `0.12.1` también dan problemas relacionados con libv8, en desarrollo mejor eliminar esta gema y dejarla solo para entornos de producción, execjs puede usar node en vez therubyracer sin problemas.
