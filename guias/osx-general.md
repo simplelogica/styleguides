@@ -124,7 +124,11 @@ A raiz de usar caskroom he encontrado [PSequel](http://www.psequel.com) una suer
 
 ``brew cask install psequel``
 
-## Sublime text 3
+## Editores
+
+Sin entrar en eternas guerras de editores, solemos usar sublime text, atom y emacs.
+
+### Sublime text 3
 
 Instalar [Sublime Text 3](http://www.sublimetext.com/3).
 
@@ -138,6 +142,7 @@ ln -s ~/Dropbox/sublime/Installed\ Packages
 mv Packages ~/Dropbox/sublime
 ln -s ~/Dropbox/sublime/Packages
 ````
+
 **Plugins que considero necesarios:**
 
 - [BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
@@ -161,7 +166,7 @@ Y ya que estamos mi archivo de preferencias luce tal que así:
 	"bold_folder_labels": false,
 	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/Expresso Old.tmTheme",
+	"color_scheme": "Packages/User/Expresso Libre.tmTheme",
 	"create_window_at_startup": false,
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
@@ -208,6 +213,56 @@ Y ya que estamos mi archivo de preferencias luce tal que así:
 	"word_wrap": true
 }
 ````
+
+### Atom.io
+
+Puedes instalarlo descargando el instalador desde su web [atom.io](https://atom.io/) o con homebrew:
+
+```
+brew cask install atom
+```
+
+Al igual que en Sublime Text podemos compartir entre distintos equipos la configuración y plugins con Dropbox:
+
+```
+mkdir ~/Dropbox/atom
+mv ~/.atom ~/Dropbox/atom
+ln -s ~/Dropbox/atom ~/.atom
+```
+
+Atom trae un montón de plugins instalados por defecto y hay algunos poco o nada necesarios que pueden ralentizar la carga del editor, así que deshabilitamos lo siguiente.
+
+- welcome
+- metrics
+- package-generator
+- Y en general todos los lenguajes que no vayas a usar, objective-c, toml, perl, etc.
+
+**Plugins que considero necesarios:**
+
+- [highlight-selected](https://atom.io/packages/highlight-selected)
+- [linter](https://atom.io/packages/linter)
+- [linter-jshint](https://atom.io/packages/linter-jshint)
+- [erb-snippets](https://atom.io/packages/erb-snippets)
+- [project-manager](https://atom.io/packages/project-manager)
+- [rails-partials](https://atom.io/packages/rails-partials)
+- [todo-show](https://atom.io/packages/todo-show)
+
+**Para frontenders:**
+
+- [html-entities](https://atom.io/packages/html-entities) ¡Obligatorio!
+- [color-picker](https://atom.io/packages/color-picker)
+- [jQuery](https://github.com/SublimeText/jQuery)
+- [jQuery Snippets](https://github.com/aaronpowell/sublime-jquery-snippets)
+
+**Git**
+
+Si quieres usar atom como editor de git, recuerda cambiar to .gitconfig `editor = atom -w --safe`
+Dos plugins muy interesantes para el workflow con git:
+
+- [languaje-diff](https://atom.io/packages/language-diff) Para los mensajes de commit y merges. 
+- [merge-conflicts](https://atom.io/packages/merge-conflicts)
+
+También tengo que recomendar el theme [ristretto-syntax](https://atom.io/themes/ristretto-syntax) que es de la casa :D.
 
 ## Utilidades
 Más abajo están todas desglosadas, pero si no te quieres romper mucho la cabeza mirando las utilidades, aqui tienes los comandos para instalarlas todas rápidamente:
