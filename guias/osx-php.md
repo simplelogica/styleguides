@@ -40,7 +40,7 @@ Añadir esta línea al fichero .profile o .bashrc o .zshrc según el shell que u
 $ source ~/.phpbrew/bashrc
 ````
 
-Si deseas visualizar en tu shell la versión de PHP que estás usando en cada momeneto también puedes añadir esta línea al fichero .profile o .bashrc o .zshrc según el shell que usemos:
+Si deseas visualizar en tu shell la versión de PHP que estás usando en cada momento, también puedes añadir esta línea al fichero .profile o .bashrc o .zshrc según el shell que usemos:
 
 ````
 export PHPBREW_SET_PROMPT=1
@@ -88,9 +88,9 @@ brew install drush
 ````
 
 ##Instalación drupal
-Para este punto puede ser más cómodo hablar con el desarrollador del proyecto para que pueda facilitar los ficheros necesarios.
+Para este punto puede ser más cómodo hablar con el desarrollador del proyecto para que nos pueda facilitar los ficheros necesarios.
 
-Clonar de github el repositorio correspondiente. Importar la base de datos en mysql y crear / copiar la carpeta de *files*.
+Clonar de github el repositorio correspondiente. Importar la base de datos en mysql y crear/copiar la carpeta de *files*.
 
 La carpeta *files* está fuera del respositorio ya que contiene ficheros binarios que son siempre del ámbito del contenido del site (imágenes, documentos, temporales, etc.). Lo normal es que se encuentre en la ruta *sites/default/files*.
 
