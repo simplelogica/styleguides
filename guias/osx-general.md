@@ -249,17 +249,15 @@ Atom trae un montón de plugins instalados por defecto y hay algunos poco o nada
 
 **Para frontenders:**
 
-- [html-entities](https://atom.io/packages/html-entities) ¡Obligatorio!
+- [html-entities](https://atom.io/packages/html-entities)
 - [color-picker](https://atom.io/packages/color-picker)
-- [jQuery](https://github.com/SublimeText/jQuery)
-- [jQuery Snippets](https://github.com/aaronpowell/sublime-jquery-snippets)
 
 **Git**
 
 Si quieres usar atom como editor de git, recuerda cambiar to .gitconfig `editor = atom -w --safe`
 Dos plugins muy interesantes para el workflow con git:
 
-- [languaje-diff](https://atom.io/packages/language-diff) Para los mensajes de commit y merges. 
+- [languaje-diff](https://atom.io/packages/language-diff) Para los mensajes de commit y merges.
 - [merge-conflicts](https://atom.io/packages/merge-conflicts)
 
 También tengo que recomendar el theme [ristretto-syntax](https://atom.io/themes/ristretto-syntax) que es de la casa :D.
