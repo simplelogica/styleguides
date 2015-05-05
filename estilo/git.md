@@ -114,7 +114,7 @@ Con **_branch.autosetuprebase always_** forzamos que el comando **git pull** hag
 ### Mensages
 
 * Escribir mensajes descriptivos y consistentes:
-  * Una primera línea con una descripción concisa de menos de 50 caracteres, para una correcta visualización tanto en clientes como en la consola. Primera palabra en mayúsculas, no acabar en punto la frase (es el asunto del commit) y usar el presente imperativo. Por ejemplo, en vez de escribir "He añadido comprobaciones para" o "Añadiendo comprobaciones para", utilizar la frase "Añadir comprobaciones para"
+  * Una primera línea con una descripción concisa de menos de 50 caracteres, para una correcta visualización tanto en clientes como en la consola. Primera palabra en mayúsculas, no acabar en punto la frase (es el asunto del commit) y usar el imperativo de la segunda persona del singular. Por ejemplo, en vez de escribir "He añadido comprobaciones para" o "Añadiendo comprobaciones para", utilizar la frase "Añade comprobaciones para"
   * Dejar una línea en blanco y escribir una descripción más detallada (por qué, cómo, número de ticket, enlaces...), máximo 72 caracteres por línea. Dependiendo del cliente lo detectará y lo mostrara como información colapsada junto a la descripción general.
 
   ```bash
