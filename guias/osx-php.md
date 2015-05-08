@@ -14,7 +14,6 @@ Antes de instalar phpbrew debemos instalar las dependencias para los [usuarios d
 
 ````
 brew install automake autoconf curl pcre re2c mhash libtool icu4c gettext jpeg libxml2 mcrypt gmp libevent
-brew link icu4c
 ````
 
 ###instalación básica phpbrew
@@ -37,7 +36,7 @@ $ phpbrew init
 Añadir esta línea al fichero .profile o .bashrc o .zshrc según el shell que usemos:
 
 ````
-$ source ~/.phpbrew/bashrc
+source ~/.phpbrew/bashrc
 ````
 
 Si deseas visualizar en tu shell la versión de PHP que estás usando en cada momento, también puedes añadir esta línea al fichero .profile o .bashrc o .zshrc según el shell que usemos:
