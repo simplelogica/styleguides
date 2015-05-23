@@ -72,6 +72,25 @@ $ phpbrew install 5.4.2 +default +mysql
 ````
 Un poco de paciencia que esta instalación durará un rato.
 
+####activar una versión
+
+Para activar una versión por defecto hay que ejecutar el comando *switch*
+
+````
+$ phpbrew switch 5.4.2
+````
+
+*ejemplo para la versión 5.4.2*
+
+Si sólo se necesita probar temporalmente algo de una versión concreta se puede hacer con el comando *use*
+
+````
+$ phpbrew use 5.4.22
+````
+
+*ejemplo para la versión 5.4.2*
+
+
 
 ##Instalación drush
 [Drush](http://www.drush.org/en/master/) es la herramienta para utilizar drupal en modo consola. Nos ayudará en tareas como instalación de módulos de drupal, arrancar un sencillo servidor http para desarrollo, limpiar caché, etc. En esta [documentación](http://drushcommands.com/) se pueden consultar todos los comandos de drush.
