@@ -38,18 +38,18 @@ Resumiendo un poco, es más ligero que el RVM. [Aqui las principales diferencias
 
 Instalación:
 
-```
+```bash
 brew install rbenv ruby-build rbenv-default-gems
 ```
 Brew instala rbenv en su propio directorio y algunas cosas pueden tener problemas. Con un enlace lo solucionamos.
 
-```
+```bash
 ln -s $RBENV_ROOT ~/.rbenv
 ```
 
 Con el plugin rbenv-default-gem podremos especificar las gemas a instalar por defecto con cada ruby en el fichero ~/.rbenv/default-gems, por ejemplo las que solemos usar independiente mente de los proyectos:
 
-```
+```bash
 bundler
 tacoma
 lunchy
@@ -59,7 +59,7 @@ mailcatcher
 
 Si vienes de RVM puede parecer raro que no tiene gemsets y deja que las gemas se gestionen con bundler directamente. Yo prefiero vendorizar las gemas en cada proyecto creando el fichero **~/.bundle/config**:
 
-```
+```yaml
 ---
 BUNDLE_PATH: ".bundle"
 ```
@@ -73,12 +73,29 @@ Siempre hay alguna gema un poco puñetera sobre todo en proyectos viejos, estás
 
 **libxml-ruby** en versiones de la gema anteriores a la 2.4.0 no soporta la versión de libxml2 de maveriks y yosemite, hay que instalar una versión anterior con brew.
 
-````
+```bash
 cd /usr/local/
 git checkout 8939a91 Library/Formula/libxml2.rb
 brew install libxml2
 brew link libxml2 --force
-````
+```
+
+UPDATE: Esta receta de homebrew está deprecated y no deja instalarla por que usa md5 en vez de sha1, para instalarla, después de hacer el checkout hay que descargarse el archivo enlazado, calcular el sha1.
+
+```
+wget ftp://xmlsoft.org/libxml2/libxml2-2.7.6.tar.gz
+shasum wget ftp://xmlsoft.org/libxml2/libxml2-2.7.6.tar.gz
+```
+
+Después hay que modificar la receta con `brew edit libxml2` y sustituir lo siguiente:
+
+```ruby
+md5 'hash_de_la_muerte'
+## por
+sha1 'resultado_de_shasum'
+```
+
+Ahora ya puedes ejecutar el brew install y el link.
 
 **Nokogiri** aun en las últimas versiones llora con libxml2, se soluciona facilmente con bundle config
 
@@ -88,19 +105,19 @@ bundle config build.nokogiri --use-system-libraries
 
 **rmagick** suele fallar por la nomenclatura de las librerías de versión nuevas de imagemagick, actualmente a mi me funciona bien la versión `6.9.0` con proyectos bastante viejos, solo hay que hacer un par de enlaces simbólicos.
 
-````
+```bash
 brew install imagemagick
 cd "`Magick-config --prefix`"/lib
 ln -s libMagick++-Q16.dylib   libMagick++.dylib
 ln -s libMagickCore-Q16.dylib libMagickCore.dylib
 ln -s libMagickWand-Q16.dylib libMagickWand.dylib
-````
+```
 
 **libv8** dependiendo de la versión tiene problemas para compilar, se recomienda actualizar, si no es una opción, nuevamente hay que tirar de homebrew. Versiones anteriores a `3.16.14.7` suelen dar problemas, se recomienda actualizar en cualquier caso.
 
-````
+```bash
 brew install v8
 bundle config build.libv8 --with-system-v8
-````
+```
 
 **therubyracer** versiones anteriores a `0.12.1` también dan problemas relacionados con libv8, en desarrollo mejor eliminar esta gema y dejarla solo para entornos de producción, execjs puede usar node en vez therubyracer sin problemas.
