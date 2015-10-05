@@ -85,6 +85,12 @@ $conf['memcache_servers'] = array('localhost:11211' => 'default');
 $conf['memcache_bins'] = array('cache' => 'default');
 ```
 
+## Arquitectura
+
+Como norma general se intentará montar las páginas bien desde módulos custom o bien desde context donde se cargan blocks creados a través de módulos. Nos apoyaremos en el módulo *empty_page* si la página sólo está compuesta de blocks, para crear la URL.
+
+El módulo views sólo deberá usarse en el CMS, se deben evitar el uso de views-page y views-block en el resto del site.
+
 ## Módulos
 
 ### Contribuidos
@@ -182,6 +188,50 @@ Módulo  | Descripción
 [boxes](https://www.drupal.org/project/boxes) | bloques
 
 ### Custom
+
+Para crear los módulos custom seguiremos las especificaciones definidas en "Drupal-8-style PSR-4":https://www.drupal.org/node/2156625. Para ello nos ayudaremos del módulo "xautoload":https://www.drupal.org/project/xautoload para hacer una carga perezosa de las clases. Siempre que podamos se utilizará OOP.
+
+#### .info
+
+En el *.info* hay que acordarse de añadir las dependencias de otros módulos:
+
+```
+dependencies[] = xautoload
+dependencies[] = ...
+```
+
+#### .module
+
+En el *.module* básicamente se implementarán los *hooks* necesarios en el módulo: hook_block_info(), hook_block_view(), hook_menu(), hook_form_FORM_ID_alter(), etc.
+
+#### templates
+
+Si fuese necesario se puede crear una carpeta *templates* para tpls con marcado básico. Los tpls con marcado definitivo deberían estar dentro del *theme*.
+
+#### js y css
+
+Para javascript será la carpeta *js* y para las hojas de estilo la carpeta *css*. Estos js y css serán exclusivos del módulo.
+
+#### src
+
+El código principal del módulo estará en carpetas dentro de *src*:
+
+```
+Block -> para las clases que implementen bloques
+Controller -> para la clase que implemente el controlador
+Form -> para las clases o hooks que implementen formularios
+Helper -> para las clases que implementen ayudas
+Page -> para las clases que implemente páginas
+Query -> para las clases que implementen EntityFieldQuery (https://api.drupal.org/api/drupal/includes!entity.inc/class/EntityFieldQuery/7)
+```
+
+Para las clases que sean *helpers* se crearán las carpetas correspondientes dentro de la estructura anterior: 
+
+```
+Block/Helper -> para las clases que implementen ayudas en los bloques
+```
+
+Siempre que sea posible en estas clases usaremos programación funcional: `array_map, array_reduce ...`
 
 ## Formularios
 
