@@ -218,7 +218,6 @@ El código principal del módulo estará en carpetas dentro de *src*:
 
 ```
 Block -> para las clases que implementen bloques
-Controller -> para la clase que implemente el controlador
 Form -> para las clases o hooks que implementen formularios
 Helper -> para las clases que implementen ayudas
 Page -> para las clases que implemente páginas
@@ -237,9 +236,16 @@ Siempre que sea posible en estas clases usaremos programación funcional: `array
 
 ## Features
 
+Se hará uso de features, junto con strongarm, para la gestión de configuraciones del site de manera que se puedan exportar configuraciones desde la base de datos a código fuente. De esta manera se pueden tener versionadas en el respositorio y se pueden desplegar junto con el resto de código de la aplicación.
+
+La mejor forma de exportar las features es por estructura (base fields, fields, content type, context, image styles, taxonomies, etc.) más que por funcionalidad (blog, agenda, noticias, destacados, etc.).
+
+Lo primero será generar, si fuese necesario, features comunes de las cuales dependan otras features. Por ejemplo, una feature común para todos los content types.
+
+
 ## Theme
 
-### .info y regiones
+### .info y regiones.
 
 ### template.php
 
@@ -247,7 +253,30 @@ Siempre que sea posible en estas clases usaremos programación funcional: `array
 
 ### temas para el CMS
 
+Algunos theme interesantes para el CMS son:
+
+[Tao](https://www.drupal.org/project/tao) & [Rubik](https://www.drupal.org/project/rubik)
+
+[Adminimal](https://www.drupal.org/project/adminimal_theme)
+
 ## Logs
+
+Es imprescindible no activar el módulo custom *dblog*, ya que este módulo graba los logs de la aplicación en base de datos. Esto a la larga puede generar problemas de rendimiento. En su lugar se utilizará el módulo sandbox [watchdog file](https://www.drupal.org/sandbox/kpander/1986402). Este módulo nos permite almacenar el log de la aplicación en un fichero, para luego poder ser rotado.
+
+Un ejemplo para el rotado usando logrotate:
+
+```
+/var/www/farmacia-principal/shared/log/farmacia-app.log {
+  daily
+  su www-data www-data
+  missingok
+  rotate 7
+  compress
+  dateext
+  dateformat -%Y-%m-%d
+  nomail
+}
+```
 
 
 
