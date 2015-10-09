@@ -1,0 +1,16 @@
+table {
+  margin: 0 -30px;
+  th {
+    padding: 8px 2px;
+    border-right: 30px solid $bg;
+    border-bottom: 2px solid $border;
+    border-left: 30px solid $bg;
+    text-align: left;
+  }
+  td {
+    padding: 12px 2px 0;
+    border-right: 30px solid $bg;
+    border-left: 30px solid $bg;
+
+  }
+}
