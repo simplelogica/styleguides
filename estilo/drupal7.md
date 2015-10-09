@@ -81,7 +81,7 @@ $conf['cache_default_class'] = 'MemCacheDrupal';
 
 // The 'cache_form' bin must be assigned to non-volatile storage.
 $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-$conf['memcache_key_prefix'] = 'wadus_unique_key';
+$conf['memcache_key_prefix'] = '<wadus>_unique_key';
 
 // Don't bootstrap the database when serving pages from the cache.
 $conf['page_cache_without_database'] = TRUE;
@@ -191,7 +191,7 @@ I+D  | Descripción
 
 ### Custom
 
-Para crear los módulos custom seguiremos las especificaciones definidas en [Drupal-8-style PSR-4](https://www.drupal.org/node/2156625). Para ello nos ayudaremos del módulo [xautoload](https://www.drupal.org/project/xautoload) para hacer una carga perezosa de las clases. Siempre que sea posible se utilizará programación orienda a objetos y programación funcional (`array_map`, `array_reduce`, etc.).
+Para crear los módulos custom seguiremos las especificaciones definidas en [Drupal-8-style PSR-4](https://www.drupal.org/node/2156625) y del [coding standards](https://www.drupal.org/coding-standards). Para ello nos ayudaremos del módulo [xautoload](https://www.drupal.org/project/xautoload) para hacer una carga perezosa de las clases. Siempre que sea posible se utilizará programación orienda a objetos y programación funcional (`array_map`, `array_reduce`, etc.).
 
 #### .info
 
@@ -309,7 +309,9 @@ sass --compass --watch assets/stylesheets:css --sourcemap=none
 
 ### templates
 
-Todos los ficheros de templates se estructurán bajo esta carpeta. La organización dependerá de cada proyecto, pero es importante que siga una lógica paralela a los módulos.
+Todos los ficheros de templates se estructurán bajo esta carpeta. La organización dependerá de cada proyecto, pero es importante que siga una lógica paralela a la de los módulos.
+
+[PHPTemplate](https://www.drupal.org/phptemplate) es el motor que se utiliza para las plantillas en drupal. Para el código fuente en estos tpls se seguirán las especificaiones del [coding standards](https://www.drupal.org/coding-standards) de drupal. 
 
 ### temas para el CMS
 
@@ -329,7 +331,7 @@ En su lugar se utilizará el módulo sandbox [watchdog file](https://www.drupal.
 Un ejemplo de configuración para el rotado usando logrotate sería:
 
 ```
-/var/www/farmacia-principal/shared/log/farmacia-app.log {
+/var/www/<wadus>/shared/log/farmacia-app.log {
   daily
   su www-data www-data
   missingok
