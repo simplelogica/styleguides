@@ -8,7 +8,10 @@ slug: drupal7
 
 Esta guía pretende ser una ayuda para construir los proyectos en drupal 7.
 
+
 ## Estructura directorios
+
+Lo ideal es que todo el proyecto esté bajo un entorno de desarrollo de ruby, rvm o similar. [Más información](https://tickets.the-cocktail.com/projects/php-room/wiki/Instalaci%C3%B3n_capistrano_y_dem%C3%A1s_gemas).
 
 La estructura a primer nivel sería:
 
@@ -39,13 +42,14 @@ sites/default
 
 ## Settings.php
 
-Fichero con algunas configuraciones locales a cada proyecto. Este fichero nunca estará en el repositorio con datos específicos. Pero sí estará como plantilla, el mejor sitio para que esté como plantilla es donde están las plantillas de capistrano para el despliegue, /config/templates/settings.php.erb
+Fichero con algunas configuraciones locales a cada proyecto. Este fichero nunca estará en el repositorio con datos específicos. Pero sí estará como plantilla, el mejor sitio para que esté como plantilla es donde están las plantillas de capistrano para el despliegue, /config/templates/settings.php.erb.
+
 
 ## Caché
 
 Siempre que el proyecto lo permita se sustituirá el almacenamiento de caché en la propia base de datos del proyecto por algún otro tipo de mecanismo de almacenamiento de caché, como [memcache](https://www.drupal.org/project/memcache) o [redis](https://www.drupal.org/project/redis).
 
-Especial preucación con las cachés de formularios, según las recomendaciones debe ser persistente.
+Especial precaución con las cachés de formularios, según las recomendaciones debe ser persistente.
 
 En el caso de memcache la configuración en el settings.php sería la siguiente:
 
@@ -87,9 +91,10 @@ $conf['memcache_servers'] = array('localhost:11211' => 'default');
 $conf['memcache_bins'] = array('cache' => 'default');
 ```
 
+
 ## Arquitectura
 
-Como norma general se intentarán montar las páginas bien desde módulos custom o bien desde context donde se cargan blocks creados a través de módulos. Nos apoyaremos en el módulo *empty_page*, para crear la URLs, si la página sólo está compuesta de blocks.
+Como norma general se intentarán montar las páginas bien desde módulos custom o bien desde context donde se cargan blocks creados a través de módulos. Nos apoyaremos en el módulo *empty_page* (para crear la URLs necesarias) si la página sólo está compuesta de blocks.
 
 El módulo views sólo deberá usarse en el CMS, se debe evitar el uso de views-page y views-block en el resto del site.
 
@@ -106,22 +111,20 @@ Módulo  | Descripción
 [overlay](https://www.drupal.org/documentation/modules/overlay) | layer para las páginas de administración
 [dblog](https://www.drupal.org/documentation/modules/dblog) | grabación de los logs en base de datos
 
+
 #### Instalar
 
 Estos son los módulos más recomendados en la mayoría de las instalaciones.
 
-##### Core
-
-Módulo  | Descripción
+Core  | Descripción
 ------------- | -------------
 [jquery update](https://www.drupal.org/project/jquery_update) | actualizaciones del jQuery del core
 [ctools](https://www.drupal.org/project/ctools) | navaja suiza
 [entity](https://www.drupal.org/project/entity) | mejora el entity API
 [libraries](https://www.drupal.org/project/libraries) | integración con librerías externas
 
-##### Estructura
 
-Módulo  | Descripción
+Estructura  | Descripción
 ------------- | -------------
 [context](https://www.drupal.org/project/context) | composición de páginas
 [context error](https://www.drupal.org/project/context_error) | composición de páginas
@@ -133,9 +136,8 @@ Módulo  | Descripción
 [strongarm](https://www.drupal.org/project/strongarm) | gestión de variables
 [xautoload](https://www.drupal.org/project/xautoload) | cargador perezoso de clases
 
-##### Contenido
 
-Módulo  | Descripción
+Contenido  | Descripción
 ------------- | -------------
 [date](https://www.drupal.org/project/date) | campo para fechas
 [imce](https://www.drupal.org/project/imce) | para subir imágenes y ficheros
@@ -143,9 +145,8 @@ Módulo  | Descripción
 [link](https://www.drupal.org/project/link) | campo para enlaces
 [wysiwyg](https://www.drupal.org/project/wysiwyg) | editores
 
-##### SEO
 
-Módulo  | Descripción
+Seo  | Descripción
 ------------- | -------------
 [global redirect](https://www.drupal.org/project/globalredirect) | muchas funcionalidades para redirects
 [hreflang](https://www.drupal.org/project/hreflang) | implementa el tag *link rel="alternate" hreflang="x"*
@@ -153,46 +154,44 @@ Módulo  | Descripción
 [pathauto](https://www.drupal.org/project/pathauto) | alias para urls/paths
 [simplemap](https://github.com/simplelogica/simplemap) | generador de sitemaps
 
-##### Métricas
 
-Módulo  | Descripción
+Métricas  | Descripción
 ------------- | -------------
 [google analytics](https://www.drupal.org/project/google_analytics) | tracking de GA
 
-##### Desarrollo
 
-Estos módulo sólo deben estar activos en entornos de desarrollo
-
-Módulo  | Descripción
+Desarrollo  | Descripción
 ------------- | -------------
 [devel](https://www.drupal.org/project/devel) | 
 [devel debug log](https://www.drupal.org/project/devel_debug_log) | 
 [diff](https://www.drupal.org/project/diff) |
 [masquerade](https://www.drupal.org/project/masquerade) | cambiar rapidamente entre usuarios
 
-##### Caché
+*Estos módulos sólo deberán estar activos en entornos de desarrollo*
 
-Módulo  | Descripción
+Caché  | Descripción
 ------------- | -------------
 [memcache](https://www.drupal.org/project/memcache) | 
 [redis](https://www.drupal.org/project/redis) |
 
-### Devel
 
-Módulo  | Descripción
+Devel  | Descripción
 ------------- | -------------
 [watchdog file](https://www.drupal.org/sandbox/kpander/1986402) | almacenar los registros del watchdog en fichero
 
-### I+D
 
-Módulo  | Descripción
+I+D  | Descripción
 ------------- | -------------
 [bean](https://www.drupal.org/project/bean) | bloques
 [boxes](https://www.drupal.org/project/boxes) | bloques
 
+
+*Estos módulos son interesantes pero deberán estudiarse más a fondo*
+
+
 ### Custom
 
-Para crear los módulos custom seguiremos las especificaciones definidas en [Drupal-8-style PSR-4](https://www.drupal.org/node/2156625). Para ello nos ayudaremos del módulo [xautoload](https://www.drupal.org/project/xautoload) para hacer una carga perezosa de las clases. Siempre que sea posible se utilizará programación orienda a objetos y programación funcional (array_map, array_reduce, etc.).
+Para crear los módulos custom seguiremos las especificaciones definidas en [Drupal-8-style PSR-4](https://www.drupal.org/node/2156625). Para ello nos ayudaremos del módulo [xautoload](https://www.drupal.org/project/xautoload) para hacer una carga perezosa de las clases. Siempre que sea posible se utilizará programación orienda a objetos y programación funcional (`array_map`, `array_reduce`, etc.).
 
 #### .info
 
@@ -205,15 +204,19 @@ dependencies[] = ...
 
 #### .module
 
-En el *.module* básicamente se implementarán los *hooks* necesarios en el módulo: `hook_block_info()`, `hook_block_view()`, `hook_menu()`, `hook_form_FORM_ID_alter()`, etc. Para el resto de código se usarán includes u otros ficheros.
+En el *.module* básicamente se implementarán los *hooks* necesarios en el módulo: `hook_block_info()`, `hook_block_view()`, `hook_menu()`, `hook_form_FORM_ID_alter()`, etc. Para el resto de código se usarán includes u otros ficheros de código.
 
 #### templates
 
-Si fuese necesario se puede crear una carpeta *templates* para tpls con marcado básico. Los tpls con marcado definitivo deberían estar dentro del *custo theme* correspondiente.
+Si fuese necesario se puede crear una carpeta *templates* para tpls con marcado básico. Los tpls con marcado definitivo deberían estar dentro del *custom theme* correspondiente.
 
-#### js y css
+#### js 
 
-Para javascript será la carpeta *js* y para las hojas de estilo la carpeta *css*. Estos js y css serán exclusivos del módulo.
+Para javascript será la carpeta *js*. Estos js serán exclusivos del módulo.
+
+#### css
+
+Para las hojas de estilo la carpeta *css*. Estos css serán exclusivos del módulo.
 
 #### src
 
@@ -235,9 +238,21 @@ Block/Helper -> para las clases que implementen ayudas exclusivamente en los blo
 
 ## Formularios
 
+Siempre que se pueda para generar formularios se utilizará el api existente para ello [FAPI](https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7).
+
+Una buena guía sobre cómo construir formularios puede encontrarse [aquí](http://themery.com/dgd7/advanced-theming/forms/generated-markup).
+
+Una de las cosas más laboriosas en los formularios es eliminar el marcado que drupal realiza sobre los fields, incluso la gestión de las clases para css. Para ello nos ayudaremos de los *hooks* necesarios (`theme_form()`, `theme_form_element()`, etc).
+
+En algunas ocasiones incluso será más óptimo especificar directamente en los propios tpls los *#id* que drupal necesita antes que estar alterando y preprocesando esta información.
+
+No olvidar al final de los tpls de los formularios renderizar el resto de fields que se pueden necesitar: 
+
 ```
 <?= drupal_render_children($form) ?>
 ```
+
+Como mínimo existen estas tres variables que son obligatorias renderizarlas para el correcto funcionamiento:
 
 ```
 <?= drupal_render($form_build_id) ?>
@@ -256,7 +271,13 @@ Lo primero será generar, si fuese necesario, features comunes de las cuales dep
 
 ## Theme
 
-### integración con front
+### integración con html estáticos
+
+Si hubiese intregración con htmls estáticos (middleman o similares), se deberán tener en cuenta estos puntos en el desarrollo de estos estáticos:
+
+* Drupal tiene su propia versión de jQuery, si fuese posible habría que utilizar esta misma versión para no tener que definir dos versiones dentro de drupal.
+* Nombrar los ficheros sass como `.scss`, evitar `css.scss` para que posteriormente pueda compilar en drupal sin problemas.
+* Utilizar librerías de terceros lo más cuidadosamente posible, ya que luego todo ese código de alguna manera hay que replicarlo en drupal.
 
 ### .info y regiones
 
@@ -265,6 +286,26 @@ Aquí podremos definir los css y js genéricos que se utilizarán en todo el sit
 ### template.php
 
 Este es el sitio para definir *hooks* y *preprocess* genéricos de la parte de theming. Especialmente es donde se implementará el `hook_theme()` para ir definiendo todos los tpls que se utilizarán en el site.
+
+### assets
+
+Carpeta para almacenar los recursos de front: fonts, images, javascripts, stylesheets, etc.
+
+### css
+
+Carpeta para almacenar las hojas de estilo de drupal. Para compilar los sass se deberá usar la gema `sass` de ruby. 
+
+Para levantar el watcher cuando se necesite y generar el css que utilizará drupal desde los sass, el comando sería:
+
+```
+sass --watch assets/stylesheets:css --sourcemap=none
+```
+
+En caso que fuese necesario implicar a compass en la compilación, el comando sería:
+
+```
+sass --compass --watch assets/stylesheets:css --sourcemap=none
+```
 
 ### templates
 
