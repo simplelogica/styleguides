@@ -47,12 +47,17 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install git zsh homebrew/dupes/openssh
 ````
 
+En caso de que queramos instalar alguna versión de un programa anterior a la de la última fórmula (por ejemplo MySQL 5.6 en lugar de la 5.7), podemos usar este tap:
+
+````
+brew tap homebrew/versions
+````
+
 ##Caskroom
 Recientemente he descubierto [caskroom.io](http://caskroom.io) para instalar todas las aplicaciones que no están en la App Store con homebrew (siempre me ha dado mucha pereza ir web a web descargando instaladores).
 
-````
-brew install caskroom/cask/brew-cask
-````
+Actualmente caskroom.io se ha integrado en el desarrollo de Homebrew, por lo que no es necesario instalarlo como un paquete a parte.
+
 Me chifla poder instalar varias aplicaciones de una comando:
 
 ````
@@ -105,7 +110,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 ````
 Usuario por defecto ``root`` sin password.
 
-Se recomenda conectar por socket para evitar la capa tcp y agilizar las conexiones poniendo en el database.yml de los proyectos ``socket: /tmp/mysql.sock``
+Se recomenda conectar por socket para evitar la capa TCP y agilizar las conexiones poniendo en el database.yml de los proyectos ``socket: /tmp/mysql.sock``
 
 Uso [Sequel Pro](http://www.sequelpro.com) para acceder comodamente al servidor local (incluso a alguno de producción ;) a pegar un vistazo rápido a algún registro, probar sqls o exportar/importar db.
 
@@ -259,7 +264,7 @@ Atom trae un montón de plugins instalados por defecto y hay algunos poco o nada
 Si quieres usar atom como editor de git, recuerda cambiar to .gitconfig `editor = atom -w --safe`
 Dos plugins muy interesantes para el workflow con git:
 
-- [languaje-diff](https://atom.io/packages/language-diff) Para los mensajes de commit y merges. 
+- [languaje-diff](https://atom.io/packages/language-diff) Para los mensajes de commit y merges.
 - [merge-conflicts](https://atom.io/packages/merge-conflicts)
 
 También tengo que recomendar el theme [ristretto-syntax](https://atom.io/themes/ristretto-syntax) que es de la casa :D.
@@ -288,6 +293,8 @@ npm install -g gulp grunt
 ```
 brew cask install dropbox google-drive google-chrome firefox slack skype keepassx the-unarchiver cyberduck xtrafinder
 ```
+
+*Nota:* si usas 1Password, hay que instalar Google Chrome sin usar caskroom. En caso contrario 1Password no puede verificar la firma del ejecutable y no podrás usar la integración.
 
 **PERSONAL UTILS**
 
