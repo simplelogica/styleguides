@@ -330,7 +330,7 @@ brew cask install spotify radiant-player macdown spectacle evernote 1password al
 
 [mailcatcher](http://mailcatcher.me/) Servidor SMTP local para capturar los mails de una aplicación rails.
 
-``brew install mailcatcher``
+``gem install mailcatcher``
 
 [terminal-notifier](https://github.com/alloy/terminal-notifier) Necesario para las notificaciones de mi script de deploys.
 
