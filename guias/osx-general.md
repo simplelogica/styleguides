@@ -25,6 +25,8 @@ Antes de nada backup de lo siguiente: (si es que lo usas ;)
 
 Descargar de la AppStore y cuando termine la descarga y se abra el instalador, cerrarlo.
 
+### Creación del disco de arranque con línea de comandos
+
 Para crear un usb de instalación, primero necesitamos fomatearlo, abre Utilidad de Discos selecciona el usb, en la pestaña de particiones, seleccionar 1 partición, usar formato HFS+ 'Mac OS Plus (con registro)' y haz click en el botón de abajo Opciones, seleccionar tabla de particiones GUID.
 
 Poner como nombre de unidad Untitled para que funcione la siguiente linea o modificarla con el nombre de la unidad correspondiente.
@@ -35,7 +37,17 @@ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstall
 
 Cuando termine (**paciencia, le puede costar unos 20 minutos dependiendo de la velocidad del usb**), reiniciar y antes de que arranque mantener pulsado alt para iniciar desde el USB.
 
-Cuando termine de cargar el instalador, entrar en utilidad de discos y formatear el hd en Mac OS Plus con registro, después seguir los pasos de instalación.
+### Creación del disco de arranque con DiskMakerX
+
+[DiskMakerX](http://diskmakerx.com/) es una utilidad para crear el disco de arranque para la instalación limpia de OSX a partir del instalador y sin tocar una línea de comandos ni preocuparse de formatos.
+
+Una vez descargado, lo ejecutamos y nos pedirá información sobre dónde está el instalador y qué disco queremos usar para crear el disco de arranque.
+
+Cuando termine, sólo hay que reiniciar y mantener pulsada la tecla alt para iniciar desde el USB.
+
+### Instalación
+
+Cuando termine de cargar el instalador desde el disco de arranque, entrar en utilidad de discos y formatear el hd en Mac OS Plus con registro, después seguir los pasos de instalación.
 
 Cuando termine de instalar, recuperar lo que hayamos guardado en el backup y entrar en la AppStore para instalar las actualizaciones correspondientes.
 
@@ -47,13 +59,18 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install git zsh homebrew/dupes/openssh
 ````
 
+En caso de que queramos instalar alguna versión de un programa anterior a la de la última fórmula (por ejemplo MySQL 5.6 en lugar de la 5.7), puede ser util este tap:
+
+````
+brew tap homebrew/versions
+````
+
 ##Caskroom
 Recientemente he descubierto [caskroom.io](http://caskroom.io) para instalar todas las aplicaciones que no están en la App Store con homebrew (siempre me ha dado mucha pereza ir web a web descargando instaladores).
 
-````
-brew install caskroom/cask/brew-cask
-````
-Me chifla poder instalar varias aplicaciones de una comando:
+Actualmente Caskroom se ha integrado en el desarrollo de Homebrew, por lo que no es necesario instalarlo como un paquete a parte, está disponible directamente en Homebrew.
+
+Me chifla poder instalar varias aplicaciones en un comando:
 
 ````
 brew cask install skype dropbox rowanj-gitx keepassx iterm2
@@ -105,7 +122,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 ````
 Usuario por defecto ``root`` sin password.
 
-Se recomenda conectar por socket para evitar la capa tcp y agilizar las conexiones poniendo en el database.yml de los proyectos ``socket: /tmp/mysql.sock``
+Se recomenda conectar por socket para evitar la capa TCP y agilizar las conexiones poniendo en el database.yml de los proyectos ``socket: /tmp/mysql.sock``
 
 Uso [Sequel Pro](http://www.sequelpro.com) para acceder comodamente al servidor local (incluso a alguno de producción ;) a pegar un vistazo rápido a algún registro, probar sqls o exportar/importar db.
 
@@ -287,6 +304,8 @@ npm install -g gulp grunt
 brew cask install dropbox google-drive google-chrome firefox slack skype keepassx the-unarchiver cyberduck xtrafinder
 ```
 
+*Nota:* si usas 1Password, hay que instalar Google Chrome sin usar caskroom. En caso contrario 1Password no puede verificar la firma del ejecutable y no podrás usar la integración.
+
 **PERSONAL UTILS**
 
 ```
@@ -321,7 +340,7 @@ brew cask install spotify radiant-player macdown spectacle evernote 1password al
 
 [mailcatcher](http://mailcatcher.me/) Servidor SMTP local para capturar los mails de una aplicación rails.
 
-``brew install mailcatcher``
+``gem install mailcatcher``
 
 [terminal-notifier](https://github.com/alloy/terminal-notifier) Necesario para las notificaciones de mi script de deploys.
 
