@@ -43,7 +43,7 @@ Cuando termine (**paciencia, le puede costar unos 20 minutos dependiendo de la v
 
 Una vez descargado, lo ejecutamos y nos pedirá información sobre dónde está el instalador y qué disco queremos usar para crear el disco de arranque.
 
-Cuando termine, sólo hay que reciniciar y pulsar la tecla alt para iniciar desde el USB.
+Cuando termine, sólo hay que reiniciar y mantener pulsada la tecla alt para iniciar desde el USB.
 
 ### Instalación
 
@@ -59,7 +59,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install git zsh homebrew/dupes/openssh
 ````
 
-En caso de que queramos instalar alguna versión de un programa anterior a la de la última fórmula (por ejemplo MySQL 5.6 en lugar de la 5.7), podemos usar este tap:
+En caso de que queramos instalar alguna versión de un programa anterior a la de la última fórmula (por ejemplo MySQL 5.6 en lugar de la 5.7), puede ser util este tap:
 
 ````
 brew tap homebrew/versions
@@ -68,9 +68,9 @@ brew tap homebrew/versions
 ##Caskroom
 Recientemente he descubierto [caskroom.io](http://caskroom.io) para instalar todas las aplicaciones que no están en la App Store con homebrew (siempre me ha dado mucha pereza ir web a web descargando instaladores).
 
-Actualmente caskroom.io se ha integrado en el desarrollo de Homebrew, por lo que no es necesario instalarlo como un paquete a parte.
+Actualmente Caskroom se ha integrado en el desarrollo de Homebrew, por lo que no es necesario instalarlo como un paquete a parte, está disponible directamente en Homebrew.
 
-Me chifla poder instalar varias aplicaciones de una comando:
+Me chifla poder instalar varias aplicaciones en un comando:
 
 ````
 brew cask install skype dropbox rowanj-gitx keepassx iterm2
