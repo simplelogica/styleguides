@@ -25,6 +25,8 @@ Antes de nada backup de lo siguiente: (si es que lo usas ;)
 
 Descargar de la AppStore y cuando termine la descarga y se abra el instalador, cerrarlo.
 
+### Creación del disco de arranque con línea de comandos
+
 Para crear un usb de instalación, primero necesitamos fomatearlo, abre Utilidad de Discos selecciona el usb, en la pestaña de particiones, seleccionar 1 partición, usar formato HFS+ 'Mac OS Plus (con registro)' y haz click en el botón de abajo Opciones, seleccionar tabla de particiones GUID.
 
 Poner como nombre de unidad Untitled para que funcione la siguiente linea o modificarla con el nombre de la unidad correspondiente.
@@ -35,7 +37,17 @@ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstall
 
 Cuando termine (**paciencia, le puede costar unos 20 minutos dependiendo de la velocidad del usb**), reiniciar y antes de que arranque mantener pulsado alt para iniciar desde el USB.
 
-Cuando termine de cargar el instalador, entrar en utilidad de discos y formatear el hd en Mac OS Plus con registro, después seguir los pasos de instalación.
+### Creación del disco de arranque con DiskMakerX
+
+[DiskMakerX](http://diskmakerx.com/) es una utilidad para crear el disco de arranque para la instalación limpia de OSX a partir del instalador y sin tocar una línea de comandos ni preocuparse de formatos.
+
+Una vez descargado, lo ejecutamos y nos pedirá información sobre dónde está el instalador y qué disco queremos usar para crear el disco de arranque.
+
+Cuando termine, sólo hay que reciniciar y pulsar la tecla alt para iniciar desde el USB.
+
+### Instalación
+
+Cuando termine de cargar el instalador desde el disco de arranque, entrar en utilidad de discos y formatear el hd en Mac OS Plus con registro, después seguir los pasos de instalación.
 
 Cuando termine de instalar, recuperar lo que hayamos guardado en el backup y entrar en la AppStore para instalar las actualizaciones correspondientes.
 
