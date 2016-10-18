@@ -16,9 +16,9 @@ Las llaves de apertura <kbd>{</kbd> se ponen en la misma linea del bloque que ab
 
 La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada al mismo nivel del bloque que abre. Normalmente se debe dejar un salto de linea inmediatamente después de la llave, salvo en los `else if` y `else`.
 
-Los punto y coma `;` los ponemos siempre. [Google][Google_ASI] lo explica estupendamente.
+Los punto y coma `;` **los ponemos siempre.** [Google][Google_ASI] lo explica estupendamente.
 
-Mejor comillas simples `'` que dobles `"`. En HTML usamos comillas dobles, y si usamos comillas simples no es necesario escapar las del
+Mejor comillas simples `'` que dobles `"`. En HTML usamos comillas dobles, y si usamos comillas simples no es necesario escapar las del HTML:
 
 ```js
 var html;
@@ -31,7 +31,7 @@ html = '<span class="wadus">...</span>';
 ```
 
 En cuanto espacios en blanco entre operadores, parentesis, etc, ver las [consideraciones
-generales][general_whitespace].
+generales](general_whitespace).
 
 Este bloque da una idea de cómo debería verse el código:
 
@@ -59,6 +59,9 @@ Ver la [guía general](/guides/general.html#nombres_de_identificadores).
 - CAPS_SNAKE_CASE para constantes.
 - UpperCamelCase para constructores (funciones que se usan con `new`).
 - lowerCamelCase para métodos de un objeto o funciones normales.
+- snake_case para variables.
+- Las variables que contengan **objetos de JQuery** comienzan con el caracter `$`.
+
 
 ## Variables globales
 

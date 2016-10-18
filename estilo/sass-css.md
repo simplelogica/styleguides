@@ -4,7 +4,7 @@ title: Hojas de estilo (SASS/CSS)
 slug: css
 ---
 
-#Hojas de estilo (SASS/CSS)
+# Hojas de estilo (SASS/CSS)
 
 ## Codificación e indentado
 
