@@ -133,6 +133,9 @@ Por ejemplo:
 /* assets/javascript/blocks/b_hotel_card.js */
 $(function() {
   var $sliders = $('.b-hotel-card').find('.sliders');
+  if ( !$sliders.length ) {
+    return;
+  }
   $sliders.find('.swiper-container').each(function() {
     var $el = $(this);
     $el.swiper({

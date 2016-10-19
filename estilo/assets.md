@@ -6,9 +6,7 @@ slug: assets
 
 # Estructura de los assets en un proyecto
 
-A continuación un ejemplo de la estructura de los assets en uno de los proyectos
-más complejos que se ha realizado hasta el momento de de escribir estas líneas
-(Iberostar).
+A continuación un ejemplo de la estructura de los assets en un proyecto complejo / extenso.
 
 ## Estructura de CSS / SASS
 ```
@@ -17,12 +15,12 @@ más complejos que se ha realizado hasta el momento de de escribir estas líneas
 |   +-- images
 |   +-- stylesheets
 |   |   +-- base (A)
-|   |   |   +-- variables.scss
-|   |   |   +-- mixins.scss
-|   |   |   +-- typography.scss
-|   |   |   +-- gradients.scss
-|   |   |   +-- animations.scss
-|   |   |   +-- forms.scss
+|   |   |   +-- _variables.scss
+|   |   |   +-- _mixins.scss
+|   |   |   +-- _typography.scss
+|   |   |   +-- _gradients.scss
+|   |   |   +-- _animations.scss
+|   |   |   +-- _forms.scss
 |   |   |   +-- ...
 |   |   |
 |   |   +-- blocks   (B)
