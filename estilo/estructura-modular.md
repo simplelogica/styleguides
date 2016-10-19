@@ -68,7 +68,7 @@ Este bloque debe tener su propia hoja de estilos ubicada en: `assets/stylesheets
 
 Así el CSS típico de este bloque podría ser:
 
-```SCSS
+```scss
 /* assets/stylesheets/blocks/_b_hotel_card.scss */
 .b-hotel-card {
   width: 100%
@@ -99,7 +99,7 @@ o integrarlos dentro de un módulo (ver más adelante).
 Cuando crees un módulo puedes ir adelantando trabajo y añadir la sección de responsive
 al mismo, si quedase vacía, al minimizar el CSS desaparecerá, así que no te preocupes.
 
-```SCSS
+```scss
 //
 // Tablet
 //

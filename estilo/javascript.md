@@ -16,9 +16,9 @@ Ver [consejos y buenas prácticas de Jquery](https://docs.google.com/presentatio
 
 ## Sintáxis
 
-Las llaves de apertura <kbd>{</kbd> se ponen en la misma linea del bloque que abren.
+Las llaves de apertura `{` se ponen en la misma linea del bloque que abren.
 
-La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada al mismo nivel del bloque que abre. Normalmente se debe dejar un salto de linea inmediatamente después de la llave, salvo en los `else if` y `else`.
+La llave de cierre `}` se pone en su propia linea, indentada al mismo nivel del bloque que abre. Normalmente se debe dejar un salto de linea inmediatamente después de la llave, salvo en los `else if` y `else`.
 
 Los punto y coma `;` **los ponemos siempre.** [Google][Google_ASI] lo explica estupendamente.
 
