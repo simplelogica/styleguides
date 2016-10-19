@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Estrcutura de los assets
+title: Estructura de los assets
 slug: assets
 ---
 
@@ -58,11 +58,11 @@ reutilizables, etc.**
 
 ### (B) assets / stylesheets / blocks
 
-La unidad constructiva fundamental de nuestro sistema es el bloque ( ver [estructura modular](/guides/estructura-modular.html) )
+La unidad constructiva fundamental de nuestro sistema es el bloque ( ver [estructura modular]({{ site.baseurl }}/estilo/estructura-modular.html) )
 en esta carpeta tendremos todos los bloques que empleemos en el site. El nombre
 del CSS **debe ser similar al nombre de la clase que define el bloque**.
 
-Asó si tenemos un bloque `.b-mi-bloque` debe está en un fichero que se llame `_b_mi_bloque.scss`.
+Así si tenemos un bloque `.b-mi-bloque` debe está en un fichero que se llame `_b_mi_bloque.scss`.
 
 Esta misma regla se sigue para los **elementos** y para los **módulos**.
 
@@ -108,11 +108,16 @@ Como vemos la estructura del JS sigue la misma línea que la del CSS. **Si un bl
 de CSS tiene un javascript asociado, crearemos el fichero JS correspondiente con
 el mismo nombre que el bloque y que la hoja de estilos.**
 
+Si nuestro bloque tiene la hoja de estilo `_b_mi_bloque.scss` su funcionalidad debe estar en un JS llamado: `_b_mi_bloque.js`.
+
 Procuraremos tener un único fichero `ready.js` para toda la aplicación donde se
 inicialice todo que sea necesario tener en el `document-ready`.
 
-Debemos **intentar mantener el `ready.js` en el mínimo posible.** Lo que añadamos
-en él debe ser de caracter general a toda la aplicación
+Debemos **intentar mantener el `ready.js` general en el mínimo posible.** Lo que
+añadamos en él debe ser de caracter general a toda la aplicación.
+
+Si vemos que el ready empieza a crecer probablemente es que tenemos que hacer un
+módulo JS independiente, y simplemente inicializarlo desde el `ready.js`.
 
 Y en el `application.js` definiremos el orden de los JSs que se minificarán:
 

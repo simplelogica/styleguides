@@ -99,10 +99,7 @@ Javascript evitamos que cree dichas variables y nos ahorramos dolores de cabeza.
 
 ## Múltiples selectores
 
-<!-- No estoy del todo convencido con esto -->
-En el caso de selectores múltiples siempre cada uno en una línea, aumenta la legibilidad.
-
-Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la legibilidad.
+En el caso de selectores múltiples **siempre cada uno en una línea,** aumenta la legibilidad.
 
 ```scss
 /* Así no */
@@ -113,7 +110,7 @@ Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la
 /* Mucho más claro así sobre todo con selectores largos */
 .pre,
 .code,
-#mi-bloque p
+#mi-bloque p,
 body#home #content .separator p span,
 body#home #content .separator .wadus span {
   /*
@@ -149,7 +146,7 @@ body {
 
 ## Colocación de las propiedades
 
-Como regla general ponemos una propiedad por linea:
+**Como regla general ponemos una propiedad por linea:**
 
 ```scss
 /* Esto es feo */
@@ -184,13 +181,14 @@ En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
 #nav .blog    { background-position: 0 -96px; }
 ```
 
-## Agrupación de las propiedades
+## Agrupación de las propiedades dentro de una clase / estilo
 
-Si tenemos un selector / clase muy extenso intentaremos agrupar las propiedades dejando una línea
+Si tenemos un selector / clase muy extenso (con muchas propiedades) intentaremos agruparlas dejando una línea
 entre las propiedades de cada tipo para poder ver más claramante. La agrupación recomendada es:
 
 ```scss
 .mi-bloque {
+
   /* Propiedades relacionadas con la visualización, display, position, margin, padding... */
   display: inline-block;
   width: flex-grid(6, 12);
@@ -205,14 +203,16 @@ entre las propiedades de cada tipo para poder ver más claramante. La agrupació
 
   /* Efectos especiales, transiciones, animaciones... */
   transition: padding .5s ease-in;
+
 }
 ```
 
 ## Agrupación de las propiedades (2)
 
 De un tiempo a esta parte algunas propiedades que siempre vienen en _tuplas_ las estamos
-poniendo en la misma línea, y parece que todo el mundo está a gusto. Podemos hacer esto
-con `width: / height:` y con `top: / right: / bottom: / left:`.
+poniendo en la misma línea, y parece que todo el mundo está a gusto.
+
+Podemos hacer esto con `width: / height:` y con `top: / right: / bottom: / left:`.
 
 ```scss
 .mi-bloque {
@@ -225,7 +225,7 @@ con `width: / height:` y con `top: / right: / bottom: / left:`.
 
 ## Especificidad
 
-La necesaria. Si hay más de tres niveles suele indicar un problema y conviene refactorizar. Por
+La necesaria. **Si hay más de tres niveles suele indicar un problema y conviene refactorizar.** Por
 ejemplo, para el siguiente HTML:
 
 ```scss
@@ -286,6 +286,7 @@ requiere soporte IE8 es recomendable poner un _fallback_ con un color sólido:
 **Si algo tiene valor `0` quitamos la unidad.**
 
 Para las dimensiones de las cajas y del _layout_ emplearemos `%` no medidas en `px`.
+
 Para la creación de el layout responsive se recomienda emplear un sistema de grid,
 el que más nos gusta es `flex-grid`, un _mixin_ de SASS que hace los cálculos por nosotros.
 [Pequeño tutorial de uso de Flex-grid](#url)
@@ -293,10 +294,10 @@ el que más nos gusta es `flex-grid`, un _mixin_ de SASS que hace los cálculos 
 
 ## Reset de estilos
 
-Tenemos nuestro propio reset de CSS [Dom-Limpio](dom_limpio) que coge un montón de
+Tenemos nuestro propio reset de CSS: [Dom-Limpio](dom_limpio) que coge un montón de
 ideas de otros resets y algunas de nuestra propia cosecha.
 
-Dom-limpio incluye un reset de tipografías. Esto es muy útil para poder hacer
+Dom-limpio incluye un **reset de tipografías.** Esto es muy útil para poder hacer
 cambios de marcado debido a SEO, sin que tengamos que retocar estilos.
 
 

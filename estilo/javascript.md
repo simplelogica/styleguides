@@ -10,6 +10,10 @@ slug: javascript
 
 Ver las [consideraciones generales](/guides/general.html).
 
+Ver [consejos y buenas prácticas de Javascript](https://docs.google.com/presentation/d/1IMl6Mg8bhaF5GJfeBON7KJ49V_lIhPXEmi7Ug7CP13M/edit?usp=sharing).
+
+Ver [consejos y buenas prácticas de Jquery](https://docs.google.com/presentation/d/17pe7sTf_qAWTxGhE9pDOBx5_k65_QHa52q0-Z3hOPUo/edit?usp=sharing).
+
 ## Sintáxis
 
 Las llaves de apertura <kbd>{</kbd> se ponen en la misma linea del bloque que abren.
@@ -18,7 +22,7 @@ La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada al mismo n
 
 Los punto y coma `;` **los ponemos siempre.** [Google][Google_ASI] lo explica estupendamente.
 
-Mejor comillas simples `'` que dobles `"`. En HTML usamos comillas dobles, y si usamos comillas simples no es necesario escapar las del HTML:
+Mejor comillas simples `'` que dobles `"`. En HTML usamos comillas dobles, si en Javascript usamos comillas simples no es necesario escapar las del HTML:
 
 ```js
 var html;
@@ -69,7 +73,7 @@ Por lo general una por proyecto como namespace. Hace falta una buena razón para
 
 ## eval()
 
-Por lo general no. Puede ser útil para deserializar respuestas de AJAX en proyectos donde no usemos
+**Nunca debemos usar eval().** Puede ser útil para deserializar respuestas de AJAX en proyectos donde no usemos
 jQuery (pero ¿qué proyectos son esos?).
 
 ## Constructores vs literales
@@ -156,9 +160,10 @@ siguiente comentario para que JSHint no se queje.
 ```
 ## JSHint
 
-Si, siempe, en ficheros antiguos y nuevos. Si hay errores en ficheros antiguos se arreglan. Cómo se
-ejecute ya depende de cada uno, aunque se recomienda usar un editor que pueda integrarlo ya que
-ayuda a capturar errores durante el desarrollo.
+**Si, siempre, en ficheros antiguos y nuevos.**
+
+Si hay errores en ficheros antiguos se arreglan. Cómo se ejecute ya depende de cada uno, aunque
+se recomienda usar un editor que pueda integrarlo ya que ayuda a capturar errores durante el desarrollo.
 
 El .jshintrc base que debe usarse es este:
 
@@ -183,7 +188,7 @@ El .jshintrc base que debe usarse es este:
 }
 ```
 
-En el hipotetico caso de que hagamos algo con otra plataforma que no sea un navegador o usemos otra
+En el hipotético caso de que hagamos algo con otra plataforma que no sea un navegador o usemos otra
 librería que no sea jQuery en algún proyecto lo cambiaremos sólo en ese proyecto.
 
 [google_asi]: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Semicolons#Semicolons

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Estructura modular (CSS/JS)
-slug: css
+slug: estructura-modular
 ---
 
 # Cómo estructurar el CSS de un projecto
@@ -21,7 +21,7 @@ Definimos 3 tipos de _entidades_ básicas:
 
 Los elementos son el módulo mínimo reutilizable en un proyecto, el ejemplo típico
 es un **botón** o un **input de un formulario** (personalizados para nuestro
-  proyecto concreto.
+  proyecto concreto).
 
 Las clases relativas a elementos comienzan con `.e-` así por ejemplo la clase de
 un botón sería `.e-btn`.

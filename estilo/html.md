@@ -50,6 +50,10 @@ Hay varias razones para esto:
 - También se vuelven locos en los comandos tipo "Close tag".
 - ¿Quien se acuerda de cuando es opcional y cuando no? Cerramos todo y nos evitamos problemas.
 
+## HTML5
+
+Siempre en proyectos nuevos. En proyectos ya existentes respetamos lo que haya.
+
 ## Doctype
 
 Siempre debe de haber un `DOCTYPE`. Evitaremos a toda costa que el navegador entre en _quirks mode_.
@@ -60,22 +64,17 @@ En proyectos nuevos usaremos el `DOCTYPE` de HTML5. En ya existentes dejaremos e
 <!DOCTYPE html>
 ```
 
-## HTML5
-
-Siempre en proyectos nuevos. En proyectos ya existentes respetamos lo que haya (generalmente XHTML
-1.0).
-
 # Usar las etiquetas más convenientes para cada contenido
 
 Recordemos que podemos usar muchos tags en HTML5 que puede ser más semánticos que `<div>` sólamente por mencionar algunos:
 
-```
+```html
 <article>	<aside> <figcaption> <figure> <figure> <nav> <section> <summary> <time>
 ```
 
 Por ejemplo si necesitamos mostrar una fecha o una hora es mucho más correcto emplear la etiqueta `<time>` que un `<div>` o un `<span>`:
 
-```
+```html
 <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
 ```
 
@@ -83,7 +82,7 @@ Por ejemplo si necesitamos mostrar una fecha o una hora es mucho más correcto e
 
 Es recomendable por SEO y por mantener nuestro HTML semántico emplear etiquetas de texto para contenidos de texto:
 
-```HTML
+```html
 <!-- No muy bien -->
 <div class="b-mi-bloque">
   <div class="title">Título</div>
@@ -101,11 +100,16 @@ Es recomendable por SEO y por mantener nuestro HTML semántico emplear etiquetas
 
 ## Atributos
 
-Mejor ponerlos entre comillas aunque sean opcionales. Mantiene la consistencia y evita futuros
+Siempre ponerlos entre **comillas dobles.** Mantiene la consistencia y evita futuros
 problemas. Además destacan más en los editores puesto que cambia el resaltado de sintaxis.
-Solemnos usar **comillas dobles** para los atributos, con una excepcción: **cuando se emplean
-_data-attributes_, especialmente si estos van a contener JSON debemos usar comillas simples.**
 
+```html
+<div class="mi-clase">...
 ```
+
+Hay una excepcción en la que usar **comillas simples**: **cuando se emplean
+_data-attributes_, especialmente si estos pueden contener JSON en algún momento.**
+
+```html
 <div class="mi-clase" data-json='{"widget":{"debug": "on", "window": { "title": "Sample Konfabulator Widget", "name": "main_window", "width": 500, "height": 500}' ></div>
 ```
