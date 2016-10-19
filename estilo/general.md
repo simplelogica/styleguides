@@ -10,9 +10,9 @@ La regla de oro es **ser consistente**. Cuando modifiques código en un fichero 
 vistazo alrededor, mira como está hecho y hazlo igual. Dentro del mismo fichero, es mejor un mal
 estilo que una mezcla de estilos.
 
-Para ficheros nuevos mejor usar esta guía.
+**Para ficheros nuevos usa esta guía.**
 
-Los editores más usados (Vim, Emacs, Textmate, Sublime text, etc.) se pueden configurar para
+Los editores más usados (Vim, Emacs, Textmate, Sublime text, Atom, etc.) se pueden configurar para
 automatizar lo que contamos aquí. Puedes usar el editor o IDE que quieras, pero si permite
 automatizar determinadas cosas te ahorrará preocupaciones y nosotros viviremos más felices.
 
@@ -41,16 +41,37 @@ lineas en blanco no se indentan por la misma razón.
 
 Es preferible que los ficheros [terminen con un caracter de fin de linea][whitespace].
 
-En expresiones y sentencias los espacios en blanco son bondad. Mejor código legible que compacto.
+En expresiones y sentencias los espacios en blanco son bondad. Mejor código legible que
+compacto, **recuerda que hay compañeros cortos de vista**, que lo agradecerán...
 
 ```js
 // Meh...
 for(var i=0;i<arr.length;i++){
   ...
 }
+function whatEver(param1,param2) {
+  ...
+}
 
 // Mejor
-for (var i = 0; i < arr.length; i++) {
+for ( var i = 0; i < arr.length; i++ ) {
+  ...
+}
+function whatEver ( param1, param2 ) {
+  ...
+}
+```
+
+También en CSS / SASS:
+
+```CSS
+/* Meh */
+.nombre-de-clase{
+  ...
+}
+
+/* Mejor */
+.nombre-de-clase {
   ...
 }
 ```
@@ -66,7 +87,7 @@ que mejor ser consistentes.
 ## Documentación y comentarios
 
 - Escribir código es más divertido que escribir su documentación.
-- Descifrar qué hace un fragmento de código es más dificil que leer documentación.
+- Descifrar qué hace un fragmento de código es más difícil que leer documentación.
 - El código se lee más veces de las que se escribe, muchas veces por más personas.
 
 Los beneficios de escribir la documentación **siempre** compensan el esfuerzo inicial, así que mejor documentar.
@@ -74,7 +95,9 @@ Los beneficios de escribir la documentación **siempre** compensan el esfuerzo i
 En cuanto al idioma mejor en Inglés. Si algo es susceptible de liberarse como open source nos
 evitamos tener que traducirlo.
 
-Si necesitamos hacer una marcianada en vez de explicar **qué** estamos haciendo es mejor explicar **por qué** lo hacemos. Si hay un ticket relacionado se puede indicar. Por ejemplo en este código:
+Si necesitamos hacer una marcianada en vez de explicar **qué** estamos haciendo es mejor
+explicar **por qué** lo hacemos. Si hay un ticket relacionado se puede indicar.
+Por ejemplo en este código:
 
 ```css
 /* Booo! */

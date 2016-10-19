@@ -4,13 +4,13 @@ title: Hojas de estilo (SASS/CSS)
 slug: css
 ---
 
-#Hojas de estilo (SASS/CSS)
+# Hojas de estilo (SASS/CSS)
 
 ## Codificación e indentado
 
 Ver las [consideraciones generales](/guides/general.html).
 
-No es necesario incluir un `@charset` al principio del fichero. Si no se indica los navegadores
+**No es necesario incluir un `@charset` al principio del fichero.** Si no se indica los navegadores
 [asumen utf8][css_utf8].
 
 Los bloques se indentan enteros. Si hay bloques dentro de bloques (reglas `@media`, anidación en
@@ -38,8 +38,8 @@ height: 100px;
 La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el
 mismo.
 
-La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada con el selector. Dejamos un
-espacio en blanco entre la llave de cierre y el siguiente selector
+La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada con el selector. **Dejamos un
+espacio en blanco entre la llave de cierre y el siguiente selector.**
 
 Dejamos un espacio entre los dos puntos <kbd>:</kbd> de una propiedad y su valor.
 
@@ -84,8 +84,8 @@ Es preferible que los nombres indiquen a qué estan dando estilos, mejor que el 
 
 Si en el futuro los botones de acción principal son azules tenemos un problema
 
-Los espacios se sustituirán por guiones <kbd>-</kbd>. Nada de caracteres de subrayado <kbd>_</kbd> o
-camelCase.
+Los espacios se sustituirán por guiones <kbd>-</kbd>. Nada de caracteres de subrayado
+<kbd>_</kbd> o _camelCase_.
 
 ```scss
 #noEscribiremosAsi { }
@@ -100,16 +100,20 @@ Javascript evitamos que cree dichas variables y nos ahorramos dolores de cabeza.
 ## Múltiples selectores
 
 <!-- No estoy del todo convencido con esto -->
-En el caso de selectores múltiples... depende: si son cortos en la misma linea, dejando un espacio
-entre la coma <kbd>,</kbd> y el siguiente selector. Si son largos en lineas a parte.
+En el caso de selectores múltiples siempre cada uno en una línea, aumenta la legibilidad.
 
 Qué es corto o largo se deja a criterio del desarrollador, siempre premiando la legibilidad.
 
 ```scss
-.pre, .code {
+/* Así no */
+.pre, .code, #mi-bloque p {
   font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
 }
 
+/* Mucho más claro así sobre todo con selectores largos */
+.pre,
+.code,
+#mi-bloque p
 body#home #content .separator p span,
 body#home #content .separator .wadus span {
   /*
@@ -143,10 +147,9 @@ body {
 }
 ```
 
-
 ## Colocación de las propiedades
 
-Ponemos una propiedad por linea
+Como regla general ponemos una propiedad por linea:
 
 ```scss
 /* Esto es feo */
@@ -169,7 +172,6 @@ En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
 ```scss
 /*
  * Tenemos un icono en cada elemento de una lista de navegación
- *
  * Ponemos el fondo en el <li> genérico y alteramos el background-position
  * en cada elemento
  */
@@ -180,6 +182,45 @@ En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
 #nav .about   { background-position: 0 -32px; }
 #nav .contact { background-position: 0 -64px; }
 #nav .blog    { background-position: 0 -96px; }
+```
+
+## Agrupación de las propiedades
+
+Si tenemos un selector / clase muy extenso intentaremos agrupar las propiedades dejando una línea
+entre las propiedades de cada tipo para poder ver más claramante. La agrupación recomendada es:
+
+```scss
+.mi-bloque {
+  /* Propiedades relacionadas con la visualización, display, position, margin, padding... */
+  display: inline-block;
+  width: flex-grid(6, 12);
+  padding-botton: 16px;
+
+  /* Propiedades relacionadas con la tipografía */
+  font-family: $font-sans;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #f00;
+
+  /* Efectos especiales, transiciones, animaciones... */
+  transition: padding .5s ease-in;
+}
+```
+
+## Agrupación de las propiedades (2)
+
+De un tiempo a esta parte algunas propiedades que siempre vienen en _tuplas_ las estamos
+poniendo en la misma línea, y parece que todo el mundo está a gusto. Podemos hacer esto
+con `width: / height:` y con `top: / right: / bottom: / left:`.
+
+```scss
+.mi-bloque {
+  display: block;
+  width: 50%; height: 150px;
+  position: absolute;
+  top: 0; right: 10px; bottom: 20px; left: 0;
+}
 ```
 
 ## Especificidad
@@ -230,16 +271,33 @@ a {
 }
 ```
 
+Si necesitamos especificar colores con transparencia / alpha empleamos `rgba`, si el projecto
+requiere soporte IE8 es recomendable poner un _fallback_ con un color sólido:
+
+```scss
+.mi-bloque {
+  background-color: #f00; /* IE 8 fallback */
+  background-color: rgba( 255, 0, 0, 0.5)
+}
+```
+
 ## Unidades, dimensiones, etc.
 
-Si algo tiene valor `0` quitamos la unidad.
+**Si algo tiene valor `0` quitamos la unidad.**
 
-Para las dimensiones de las cajas preferimos usar `px` ya que nos dan mayor control. Para sitios en
-responsive evaluaremos el uso de `%` donde pueda tener sentido.
+Para las dimensiones de las cajas y del _layout_ emplearemos `%` no medidas en `px`.
+Para la creación de el layout responsive se recomienda emplear un sistema de grid,
+el que más nos gusta es `flex-grid`, un _mixin_ de SASS que hace los cálculos por nosotros.
+[Pequeño tutorial de uso de Flex-grid](#url)
+
 
 ## Reset de estilos
 
-[Éste][base_css]. [Razón aquí][saner_reset].
+Tenemos nuestro propio reset de CSS [Dom-Limpio](dom_limpio) que coge un montón de
+ideas de otros resets y algunas de nuestra propia cosecha.
+
+Dom-limpio incluye un reset de tipografías. Esto es muy útil para poder hacer
+cambios de marcado debido a SEO, sin que tengamos que retocar estilos.
 
 
 ## Fuentes
@@ -305,11 +363,9 @@ pre, code {
 }
 ```
 
-
-
 [css_utf8]: http://www.w3.org/TR/CSS21/syndata.html#charset
 [IE_globals]: http://stackoverflow.com/questions/9275331/ie-cant-manage-global-variables
 [mdn_css_efficiency]: https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS#Avoid_the_descendant_selector.21
-[base_css]: https://github.com/afgomez/base.css
+[dom_limpio]: https://github.com/carloscabo/dom-limpio
 [saner_reset]: http://afgomez.es/blog/a-saner-reset-stylesheet/
 [FF_Gen]: http://www.fontsquirrel.com/fontface/generator
