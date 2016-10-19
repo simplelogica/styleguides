@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Estructura modular (SASS/CSS)
+title: Estructura modular (CSS/JS)
 slug: css
 ---
 
@@ -8,7 +8,7 @@ slug: css
 
 ## Nomenclatura y estructura
 
-Nuestro enfoque está basado en el atomic design de Brad Frost, adapatado a la
+Nuestro enfoque está basado en el _atomic design de Brad Frost_, adaptado a la
 tipología de nuestros proyectos.
 
 Definimos 3 tipos de _entidades_ básicas:
@@ -19,9 +19,9 @@ Definimos 3 tipos de _entidades_ básicas:
 
 ## 1. Elementos
 
-Los elementos son el módulo mínimo reutilizable que se puede reutilizar en un
-poryecto, el ejemplo típico es un **botón** o un **input de un formulario**
-(personalizados para nuestro proyecto concreto.
+Los elementos son el módulo mínimo reutilizable en un proyecto, el ejemplo típico
+es un **botón** o un **input de un formulario** (personalizados para nuestro
+  proyecto concreto.
 
 Las clases relativas a elementos comienzan con `.e-` así por ejemplo la clase de
 un botón sería `.e-btn`.
