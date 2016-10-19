@@ -35,15 +35,15 @@ height: 100px;
 
 ## Sintáxis
 
-La llave de apertura <kbd>{</kbd> se pone en la misma linea del selector, dejando un espacio con el
+La llave de apertura `{` se pone en la misma linea del selector, dejando un espacio con el
 mismo.
 
-La llave de cierre <kbd>}</kbd> se pone en su propia linea, indentada con el selector. **Dejamos un
+La llave de cierre `}` se pone en su propia linea, indentada con el selector. **Dejamos un
 espacio en blanco entre la llave de cierre y el siguiente selector.**
 
-Dejamos un espacio entre los dos puntos <kbd>:</kbd> de una propiedad y su valor.
+Dejamos un espacio entre los dos puntos `:` de una propiedad y su valor.
 
-Siempre ponemos el punto y coma <kbd>;</kbd> de cierre, incluso en la última linea.
+Siempre ponemos el punto y coma `;` de cierre, incluso en la última linea.
 
 Este bloque da una idea de cómo tiene que verse el código:
 
@@ -64,7 +64,7 @@ Este bloque da una idea de cómo tiene que verse el código:
 
 Ver la [guía general](/guides/general.html#nombres_de_identificadores).
 
-Es preferible que los nombres indiquen a qué estan dando estilos, mejor que el estilo que dan:
+Es preferible que los nombres indiquen a qué están dando estilos, mejor que el estilo que dan:
 
 ```scss
 /* Describe cómo es el botón, no lo que hace */
@@ -84,8 +84,8 @@ Es preferible que los nombres indiquen a qué estan dando estilos, mejor que el 
 
 Si en el futuro los botones de acción principal son azules tenemos un problema
 
-Los espacios se sustituirán por guiones <kbd>-</kbd>. Nada de caracteres de subrayado
-<kbd>_</kbd> o _camelCase_.
+Los espacios se sustituirán por guiones ` - ` (_caterpillar-case_). Nada de caracteres de subrayado
+` _ ` o _camelCase_.
 
 ```scss
 #noEscribiremosAsi { }
@@ -94,7 +94,7 @@ Los espacios se sustituirán por guiones <kbd>-</kbd>. Nada de caracteres de sub
 ```
 
 La razón de esto es que Internet Explorer crea una [variable global][IE_globals] con el mismo nombre
-que el ID de los elementos. Como un <kbd>-</kbd> no es válido dentro de un identificador en
+que el ID de los elementos. Como un ` - ` no es válido dentro de un identificador en
 Javascript evitamos que cree dichas variables y nos ahorramos dolores de cabeza.
 
 ## Múltiples selectores
@@ -114,7 +114,7 @@ En el caso de selectores múltiples **siempre cada uno en una línea,** aumenta 
 body#home #content .separator p span,
 body#home #content .separator .wadus span {
   /*
-   * Si tienes un selector así el menor de tus problemas
+   * Si tienes un selector así de largo el menor de tus problemas
    * es si lo pones en una linea a parte o no.
    */
 }
@@ -183,8 +183,8 @@ En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
 
 ## Agrupación de las propiedades dentro de una clase / estilo
 
-Si tenemos un selector / clase muy extenso (con muchas propiedades) intentaremos agruparlas dejando una línea
-entre las propiedades de cada tipo para poder ver más claramante. La agrupación recomendada es:
+Si tenemos un selector / clase muy extenso (con muchas propiedades) **intentaremos agruparlas dejando una línea
+entre las propiedades de cada tipo** para poder ver más claramente. La agrupación recomendada es:
 
 ```scss
 .mi-bloque {

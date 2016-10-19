@@ -64,7 +64,7 @@ function whatEver ( param1, param2 ) {
 
 También en CSS / SASS:
 
-```CSS
+```scss
 /* Meh */
 .nombre-de-clase{
   ...

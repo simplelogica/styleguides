@@ -69,7 +69,15 @@ En proyectos nuevos usaremos el `DOCTYPE` de HTML5. En ya existentes dejaremos e
 Recordemos que podemos usar muchos tags en HTML5 que puede ser más semánticos que `<div>` sólamente por mencionar algunos:
 
 ```html
-<article>	<aside> <figcaption> <figure> <figure> <nav> <section> <summary> <time>
+<article>
+<aside>
+<figcaption>
+<figure>
+<figure>
+<nav>
+<section>
+<summary>
+<time>
 ```
 
 Por ejemplo si necesitamos mostrar una fecha o una hora es mucho más correcto emplear la etiqueta `<time>` que un `<div>` o un `<span>`:
@@ -80,7 +88,7 @@ Por ejemplo si necesitamos mostrar una fecha o una hora es mucho más correcto e
 
 # Usar etiquetas de texto para contenidos de texto
 
-Es recomendable por SEO y por mantener nuestro HTML semántico emplear etiquetas de texto para contenidos de texto:
+Es recomendable por SEO y por mantener nuestro HTML semántico **emplear etiquetas de texto para contenidos de texto:**
 
 ```html
 <!-- No muy bien -->
