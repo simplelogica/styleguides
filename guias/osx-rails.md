@@ -6,11 +6,11 @@ slug: osx-rails
 
 # Entorno de desarrollo para Ruby on Rails en OSX
 
-Lo primero de todo es tener un gestor para las distintas versiones de ruby con las que solemos trabajar, ree, 1.9.3, 2.1.5 y 2.2.2.
+Lo primero de todo es tener un gestor para las distintas versiones de ruby con las que solemos trabajar: REE, 1.9.3, 2.1.5 y 2.2.2.
 
 La opción mas generalizada es usar RVM, pero si no tienes que mantener proyectos muy viejos que no usan bundler, RBENV se presenta como una buena alternativa alegando ser más ligero y menos intrusivo.
 
-**¡OJO CUIDADO!** RVM y RBENV no pueden estar instalados simultáneamente.
+**¡OJO CUIDADO!** RVM y RBENV **no** pueden estar instalados simultáneamente.
 
 ##RVM
 ```
@@ -32,7 +32,7 @@ rvm rvmrc warning ignore all.rvmrcs
 
 Las malas lenguas dicen que puede dar problemas con proyectos muy viejos.
 
-Resumiendo un poco, es más ligero que el RVM. [Aqui las principales diferencias](https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F)
+Resumiendo un poco, es más ligero que el RVM. [Aquí las principales diferencias](https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F)
 
 **NOTA:** Revisar también el apartado de dotfiles si se va a usar RBENV.
 

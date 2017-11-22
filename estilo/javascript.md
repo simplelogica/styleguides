@@ -8,7 +8,7 @@ slug: javascript
 
 ## Codificación e indentado
 
-Ver las [consideraciones generales](/guides/general.html).
+Ver las [consideraciones generales](/estilo/general.html).
 
 Ver [consejos y buenas prácticas de Javascript](https://docs.google.com/presentation/d/1IMl6Mg8bhaF5GJfeBON7KJ49V_lIhPXEmi7Ug7CP13M/edit?usp=sharing).
 
@@ -34,8 +34,7 @@ html = "<span class=\"wadus\">...</span>";
 html = '<span class="wadus">...</span>';
 ```
 
-En cuanto espacios en blanco entre operadores, parentesis, etc, ver las [consideraciones
-generales](general_whitespace).
+En cuanto espacios en blanco entre operadores, paréntesis, etc, ver las [consideraciones generales](/estilo/general.html#espacios-en-blanco).
 
 Este bloque da una idea de cómo debería verse el código:
 
@@ -58,7 +57,7 @@ function foo(bar) {
 
 ## Nombres de los identificadores
 
-Ver la [guía general](/guides/general.html#nombres_de_identificadores).
+Ver la [guía general](/estilo/general.html#nombres-de-identificadores).
 
 - CAPS_SNAKE_CASE para constantes.
 - UpperCamelCase para constructores (funciones que se usan con `new`).
@@ -192,7 +191,6 @@ En el hipotético caso de que hagamos algo con otra plataforma que no sea un nav
 librería que no sea jQuery en algún proyecto lo cambiaremos sólo en ese proyecto.
 
 [google_asi]: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Semicolons#Semicolons
-[general_whitespace]: /guides/general.html#espacios_en_blanco
 [amazon_strict_mode]: https://bugzilla.mozilla.org/show_bug.cgi?id=579119
 [mdn_strict]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode
 [jresig_strict]: http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/

@@ -16,12 +16,12 @@ Los editores más usados (Vim, Emacs, Textmate, Sublime text, Atom, etc.) se pue
 automatizar lo que contamos aquí. Puedes usar el editor o IDE que quieras, pero si permite
 automatizar determinadas cosas te ahorrará preocupaciones y nosotros viviremos más felices.
 
-## Codificación y fin de linea
+## Codificación y fin de línea
 
 Estamos en el siglo XXI, así que todo debe de ir guardado en utf8 sin BOM (Byte Order Mark). Meter
 un BOM [rompe Internet Explorer][ie_bom].
 
-Casi todos usamos Mac o Linux, así que el fin de linea debe ser el de UNIX (LF)
+Casi todos usamos Mac o Linux, así que el fin de línea debe ser el de UNIX (LF)
 
 ## Indentado
 
@@ -36,10 +36,10 @@ Si necesitas más de tres niveles de indentación [seguramente tienes un problem
 
 ## Espacios en blanco
 
-Los espacios en blanco al final de linea los quitamos. No aportan nada y manchan los diffs. Las
-lineas en blanco no se indentan por la misma razón.
+Los espacios en blanco al final de línea los quitamos. No aportan nada y manchan los diffs. Las
+líneas en blanco no se indentan por la misma razón.
 
-Es preferible que los ficheros [terminen con un caracter de fin de linea][whitespace].
+Es preferible que los ficheros [terminen con un caracter de fin de línea][whitespace].
 
 En expresiones y sentencias los espacios en blanco son bondad. Mejor código legible que
 compacto, **recuerda que hay compañeros cortos de vista**, que lo agradecerán...
@@ -81,7 +81,7 @@ También en CSS / SASS:
 Tan corto como sea posible. Tan largo como sea necesario. Por ejemplo, no usar `navigation` si con
 `nav` basta. Usar `author` si `aut` no es suficiente.
 
-En cuanto al idioma, mejor en Inglés. Las APIs de todo con lo que trabajamos están en Inglés, así
+En cuanto al idioma, mejor en inglés. Las APIs de todo con lo que trabajamos están en inglés, así
 que mejor ser consistentes.
 
 ## Documentación y comentarios
@@ -92,7 +92,7 @@ que mejor ser consistentes.
 
 Los beneficios de escribir la documentación **siempre** compensan el esfuerzo inicial, así que mejor documentar.
 
-En cuanto al idioma mejor en Inglés. Si algo es susceptible de liberarse como open source nos
+En cuanto al idioma, mejor en inglés. Si algo es susceptible de liberarse como open source nos
 evitamos tener que traducirlo.
 
 Si necesitamos hacer una marcianada en vez de explicar **qué** estamos haciendo es mejor
