@@ -8,7 +8,7 @@ slug: css
 
 ## Codificación e indentado
 
-Ver las [consideraciones generales](/guides/general.html).
+Ver las [consideraciones generales](/estilo/general.html).
 
 **No es necesario incluir un `@charset` al principio del fichero.** Si no se indica los navegadores
 [asumen utf8][css_utf8].

@@ -34,7 +34,7 @@ html = "<span class=\"wadus\">...</span>";
 html = '<span class="wadus">...</span>';
 ```
 
-En cuanto espacios en blanco entre operadores, paréntesis, etc, ver las [consideraciones generales](/estilo/general.html#espacios_en_blanco).
+En cuanto espacios en blanco entre operadores, paréntesis, etc, ver las [consideraciones generales](/estilo/general.html#espacios-en-blanco).
 
 Este bloque da una idea de cómo debería verse el código:
 
@@ -57,7 +57,7 @@ function foo(bar) {
 
 ## Nombres de los identificadores
 
-Ver la [guía general](/estilo/general.html#nombres_de_identificadores).
+Ver la [guía general](/estilo/general.html#nombres-de-identificadores).
 
 - CAPS_SNAKE_CASE para constantes.
 - UpperCamelCase para constructores (funciones que se usan con `new`).

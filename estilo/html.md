@@ -8,7 +8,7 @@ slug: html
 
 ## Codificación e indentado
 
-Ver las [consideraciones generales](/guides/general.html).
+Ver las [consideraciones generales](/estilo/general.html).
 
 Meteremos un `<meta>` con la codificación del fichero. Normalmente es apache/nginx quien se encarga
 de especificar la codificación en las cabeceras pero no siempre podemos controlar esto.
