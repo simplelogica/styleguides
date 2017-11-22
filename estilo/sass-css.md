@@ -33,17 +33,17 @@ height: 100px;
 }
 ```
 
-## Sintáxis
+## Sintaxis
 
-La llave de apertura `{` se pone en la misma linea del selector, dejando un espacio con el
+La llave de apertura `{` se pone en la misma línea del selector, dejando un espacio con el
 mismo.
 
-La llave de cierre `}` se pone en su propia linea, indentada con el selector. **Dejamos un
+La llave de cierre `}` se pone en su propia línea, indentada con el selector. **Dejamos un
 espacio en blanco entre la llave de cierre y el siguiente selector.**
 
 Dejamos un espacio entre los dos puntos `:` de una propiedad y su valor.
 
-Siempre ponemos el punto y coma `;` de cierre, incluso en la última linea.
+Siempre ponemos el punto y coma `;` de cierre, incluso en la última línea.
 
 Este bloque da una idea de cómo tiene que verse el código:
 
@@ -115,7 +115,7 @@ body#home #content .separator p span,
 body#home #content .separator .wadus span {
   /*
    * Si tienes un selector así de largo el menor de tus problemas
-   * es si lo pones en una linea a parte o no.
+   * es si lo pones en una línea a parte o no.
    */
 }
 ```
@@ -146,7 +146,7 @@ body {
 
 ## Colocación de las propiedades
 
-**Como regla general ponemos una propiedad por linea:**
+**Como regla general ponemos una propiedad por línea:**
 
 ```scss
 /* Esto es feo */
@@ -161,10 +161,10 @@ body {
 ```
 
 Si tenemos varios selectores que vayan variando la misma propiedad en el mismo elemento (un
-`background-position` por ejemplo) podemos saltarnos esta regla. Poner las propiedades en una linea
+`background-position` por ejemplo) podemos saltarnos esta regla. Poner las propiedades en una línea
 permite juntar los selectores y asociarlos al elemento que están modificando.
 
-En dicho caso tampoco es necesario dejar una linea en blanco entre selectores.
+En dicho caso tampoco es necesario dejar una línea en blanco entre selectores.
 
 ```scss
 /*
@@ -257,7 +257,7 @@ diferente a uno de los enlaces tenemos menos especificidad que sobreescribir.
 
 ## Colores
 
-Hexadecimal es preferido. Usaremos la sintáxis compacta cuando sea posible.
+Hexadecimal es preferido. Usaremos la sintaxis compacta cuando sea posible.
 
 ```scss
 /* Meh... */
