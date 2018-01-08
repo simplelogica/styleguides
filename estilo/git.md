@@ -111,7 +111,7 @@ Con **_branch.autosetuprebase always_** forzamos que el comando **git pull** hag
 
 * Si has acumulado varios commits, al hacerlo procura mantener el orden lógico, es decir si un cambio en un commit depende de otro, el dependiente deberá de hacerse después. Y describe la dependencia en los comentarios.
 
-### Mensages
+### Mensajes
 
 * Escribir mensajes descriptivos y consistentes:
   * Una primera línea con una descripción concisa de menos de 50 caracteres, para una correcta visualización tanto en clientes como en la consola. Primera palabra en mayúsculas, no acabar en punto la frase (es el asunto del commit) y usar el imperativo de la segunda persona del singular. Por ejemplo, en vez de escribir "He añadido comprobaciones para" o "Añadiendo comprobaciones para", utilizar la frase "Añade comprobaciones para"
