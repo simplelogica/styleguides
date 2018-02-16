@@ -6,20 +6,20 @@ slug: osx-php
 
 # Entorno de desarrollo para Drupal en OSX
 
-##Instalación phpbrew
+## Instalación phpbrew
 Para la instalación de PHP y la gestión de sus diferentes versiones utilizaremos PHPBrew.
 
-###Dependencias phpbrew
+### Dependencias phpbrew
 Antes de instalar phpbrew debemos instalar las dependencias para los [usuarios de homebrew](https://github.com/phpbrew/phpbrew/wiki/Requirement). De esta documentación hay que prestar especial atención a:
 
 ````
 brew install automake autoconf curl pcre re2c mhash libtool icu4c gettext jpeg libxml2 mcrypt gmp libevent
 ````
 
-###instalación básica phpbrew
+### Instalación básica phpbrew
 Seguiremos los pasos indicados en la documentación de [PHPBrew](http://phpbrew.github.io/phpbrew/) teniendo en cuenta las configuraciones específicas para homebrew. De esta documentación hay que prestar especial atención a:
 
-####instalación
+#### Instalación
 ````
 cd ~/
 curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
@@ -27,12 +27,12 @@ chmod +x phpbrew
 sudo mv phpbrew /usr/local/bin/phpbrew
 ````
 
-####inicialización
+#### Inicialización
 ````
 $ phpbrew init
 ````
 
-####configuración shell
+#### Configuración shell
 Añadir esta línea al fichero .profile o .bashrc o .zshrc según el shell que usemos:
 
 ````
@@ -52,7 +52,7 @@ De nuevo configuramos para usuarios de homebrew:
 $ phpbrew lookup-prefix homebrew
 ````
 
-####versiones
+#### Versiones
 Por último ya podremos instalar las versiones de PHP y de las librerías necesarias. El parámetro *install* nos permite realizar esto mediante *variantes*. La versión mínima a instalar de PHP es la 5.4.x. Además deberemos instalar las variantes *default* y *mysql*. Esto nos instalará un PHP con las librerías más comunes y la librería para acceder a mysql. Para instalación más detallada de otras variantes consultar la [documentación](http://phpbrew.github.io/phpbrew/).
 
 ````
@@ -72,7 +72,7 @@ $ phpbrew install 5.4.2 +default +mysql
 ````
 Un poco de paciencia que esta instalación durará un rato.
 
-####activar una versión
+#### Activar una versión
 
 Para activar una versión por defecto hay que ejecutar el comando *switch*
 
@@ -92,7 +92,7 @@ $ phpbrew use 5.4.22
 
 
 
-##Instalación drush
+## Instalación drush
 [Drush](http://www.drush.org/en/master/) es la herramienta para utilizar drupal en modo consola. Nos ayudará en tareas como instalación de módulos de drupal, arrancar un sencillo servidor http para desarrollo, limpiar caché, etc. En esta [documentación](http://drushcommands.com/) se pueden consultar todos los comandos de drush.
 
 Para instalarlo en homebrew seguiremos los pasos de la [documentación](https://www.drupal.org/node/954766) existente en la comunidad. De esta documentación hay que prestar especial atención a:
@@ -105,7 +105,7 @@ brew tap homebrew/php
 brew install drush
 ````
 
-##Instalación drupal
+## Instalación drupal
 Para este punto puede ser más cómodo hablar con el desarrollador del proyecto para que nos pueda facilitar los ficheros necesarios.
 
 Clonar de github el repositorio correspondiente. Importar la base de datos en mysql y crear/copiar la carpeta de *files*.
@@ -120,7 +120,7 @@ Debemos modificar los parámetros de conexión a la base de datos con los que co
 host='127.0.0.1'
 ````
 
-##Día a día
+## Día a día
 
 Lo primero que tenemos que hacer siempre que queramos acceder a un drupal en local es levantar un pequeño servidor http que nos sirva el site. Esto lo haremos mediante el comando de drush [runserver](http://drushcommands.com/drush-6x/runserver/runserver).
 
@@ -134,7 +134,7 @@ drush rs --server=builtin
 
 En este caso tendríamos nuestro drupal en la url *http://127.0.0.1:8888*
 
-####Pow
+#### Pow
 
 Si estamos usando pow podemos configurarlo para tener el dominio *mi-dominio.dev* apuntando al puerto 8888.
 

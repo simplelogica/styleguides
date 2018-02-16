@@ -1,12 +1,14 @@
+
+
 ---
 layout: default
 title: Preparación de entorno de desarrollo en OSX
 slug: osx-general
 ---
 
-#Preparación de entorno de desarrollo en OSX Yosemite
+# Preparación de entorno de desarrollo en OSX Yosemite
 
-##Backup
+## Backup
 
 Antes de nada backup de lo siguiente: (si es que lo usas ;)
 
@@ -20,7 +22,7 @@ Antes de nada backup de lo siguiente: (si es que lo usas ;)
 - `/usr/local/bin/get_password_from_keyring`
 - `/usr/local/bin/rawclone`
 
-##Instalación limpia
+## Instalación limpia
 <img src="http://krakenbyte.com/wp-content/uploads/2014/11/kraken-instalar-os-x-yosemite.png" width="150" height="150">
 
 Descargar de la AppStore y cuando termine la descarga y se abra el instalador, cerrarlo.
@@ -51,7 +53,7 @@ Cuando termine de cargar el instalador desde el disco de arranque, entrar en uti
 
 Cuando termine de instalar, recuperar lo que hayamos guardado en el backup y entrar en la AppStore para instalar las actualizaciones correspondientes.
 
-##Homebrew
+## Homebrew
 Lo primero de todo instalar [homebrew](http://brew.sh) para actualizar la versión de git, openssh y zsh.
 
 ````
@@ -65,7 +67,7 @@ En caso de que queramos instalar alguna versión de un programa anterior a la de
 brew tap homebrew/versions
 ````
 
-##Caskroom
+## Caskroom
 Recientemente he descubierto [caskroom.io](http://caskroom.io) para instalar todas las aplicaciones que no están en la App Store con homebrew (siempre me ha dado mucha pereza ir web a web descargando instaladores).
 
 Actualmente Caskroom se ha integrado en el desarrollo de Homebrew, por lo que no es necesario instalarlo como un paquete a parte, está disponible directamente en Homebrew.
@@ -76,7 +78,7 @@ Me chifla poder instalar varias aplicaciones en un comando:
 brew cask install skype dropbox rowanj-gitx keepassx iterm2
 ````
 
-##Dotfiles
+## Dotfiles
 Uso zsh por defecto ``chsh -s /bin/zsh`` con [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/) y un theme personalizado con un par de plugins própios. Pegarle un vistazo a la carpeta plugins para conocer un poco de la magia.
 
 A parte de eso, los dotfiles llevan un instalador y generador de .gitconfig, .gitignore, .irbrc y .gemrc
@@ -89,7 +91,7 @@ rake install
 ```
 **NOTA:** Si vas a usar RBENV en vez de RVM, clona el repositorio *https://github.com/rsierra/dotfiles.git*, es el mismo, pero con los cambios necesarios para RBENV.
 
-##POW
+## POW
 
 Instalar [Pow](http://pow.cx) para lanzar de forma cómoda todos los proyectos rack.
 
@@ -322,7 +324,9 @@ brew cask install spotify radiant-player macdown spectacle evernote 1password al
 
 ``brew install heroku-toolbelt``
 
-[Tacoma](https://github.com/pantulis/tacoma) gestión de multiples credenciales AWS de nuestro querido CTO Lupión. Totalmente necesario si llevas mas de un proyecto alojado en Amazon o que tire de S3.
+[Tacoma](https://github.com/pantulis/tacoma)* gestión de multiples credenciales AWS de nuestro querido CTO Lupión. Totalmente necesario si llevas mas de un proyecto alojado en Amazon o que tire de S3.
+
+*_Recuerda seguir los pasos de configuración de Tacoma indicados en el README del repo._
 
 ``gem install tacoma``
 
@@ -427,7 +431,7 @@ Para iniciar un proyecto con middleman usando la plantilla:
 ``middleman init project_name --template=middleman-base``
 
 
-##Aplicaciones de la App Store
+## Aplicaciones de la App Store
 Otras app que suelo instalar en todos los equipos (algunas de pago).
 
 - 1password (brew cask install 1password)
