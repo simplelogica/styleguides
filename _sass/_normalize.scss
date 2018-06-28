@@ -181,8 +181,9 @@ sub {
  * Remove border when inside `a` element in IE 8/9/10.
  */
 
-img {
+img, iframe {
   border: 0;
+  max-width: 100%;
 }
 
 /**
@@ -232,6 +233,7 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
+  word-wrap: break-word;
 }
 
 /* Forms

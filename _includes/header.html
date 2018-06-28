@@ -1,22 +1,26 @@
 <header class="site-header">
+  <a href="{{ site.baseurl }}/" class="logo-mobile"><img src="/images/logo-white.png" alt="The cocktail"></a>
+  <span class="btn-mobile-menu"></span>
   <nav class="site-nav">
-    <a href="{{ site.baseurl }}/" class="logo">Simplelógica</a>
+    <div class="site-logo">
+      <a href="{{ site.baseurl }}/" class="logo"><img src="/images/logo.png" alt="The cocktail"></a>
+    </div>
     <ul>
       <li><h3>Guías de estilo</h3></li>
-      <li><a href="{{ site.baseurl }}/estilo/general.html"{% if page.slug == "general" %} class="active"{% endif %}>General</a></li>
-      <li><a href="{{ site.baseurl }}/estilo/html.html"{% if page.slug == "html" %} class="active"{% endif %}>HTML</a></li>
-      <li><a href="{{ site.baseurl }}/estilo/sass-css.html"{% if page.slug == "css" %} class="active"{% endif %}>SASS/CSS</a></li>
-      <li><a href="{{ site.baseurl }}/estilo/javascript.html"{% if page.slug == "javascript" %} class="active"{% endif %}>Javascript</a></li>
-      <li><a href="{{ site.baseurl }}/estilo/assets.html"{% if page.slug == "assets" %} class="active"{% endif %}>Organización de assets</a></li>
-      <li><a href="{{ site.baseurl }}/estilo/estructura-modular.html"{% if page.slug == "estructura-modular" %} class="active"{% endif %}>Estructura modular</a></li>
-      <li><a href="{{ site.baseurl }}/estilo/git.html"{% if page.slug == "git" %} class="active"{% endif %}>Git</a></li>
-      <li><a href="{{ site.baseurl }}/estilo/drupal7.html"{% if page.slug == "drupal7" %} class="active"{% endif %}>Drupal 7</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/general.html"{% if page.slug == "general" %} class="active"{% endif %}><i class="em em-abcd"></i> General</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/html.html"{% if page.slug == "html" %} class="active"{% endif %}><i class="em em-frog"></i> HTML</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/sass-css.html"{% if page.slug == "css" %} class="active"{% endif %}><i class="em em-prince"></i> SASS/CSS</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/javascript.html"{% if page.slug == "javascript" %} class="active"{% endif %}><i class="em em-mage"></i> Javascript</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/assets.html"{% if page.slug == "assets" %} class="active"{% endif %}><i class="em em-building_construction"></i> Organización de assets</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/estructura-modular.html"{% if page.slug == "estructura-modular" %} class="active"{% endif %}><i class="em em-roller_coaster"></i> Estructura modular</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/git.html"{% if page.slug == "git" %} class="active"{% endif %}><i class="em em-handbag"></i> Git</a></li>
+      <li><a href="{{ site.baseurl }}/estilo/drupal7.html"{% if page.slug == "drupal7" %} class="active"{% endif %}><i class="em em-dash"></i> Drupal 7</a></li>
     </ul>
     <ul>
       <li><h3>Entornos de desarrollo</h3></li>
-      <li><a href="{{ site.baseurl }}/guias/osx-general.html"{% if page.slug == "osx-general" %} class="active"{% endif %}>Preparación de Yosemite</a></li>
-      <li><a href="{{ site.baseurl }}/guias/osx-rails.html"{% if page.slug == "osx-rails" %} class="active"{% endif %}>Entorno Rails en OSX</a></li>
-      <li><a href="{{ site.baseurl }}/guias/osx-php.html"{% if page.slug == "osx-php" %} class="active"{% endif %}>Entorno PHP en OSX</a></li>
+      <li><a href="{{ site.baseurl }}/guias/osx-general.html"{% if page.slug == "osx-general" %} class="active"{% endif %}><i class="em em-candy"></i> Preparación de Yosemite</a></li>
+      <li><a href="{{ site.baseurl }}/guias/osx-rails.html"{% if page.slug == "osx-rails" %} class="active"{% endif %}><i class="em em-gem"></i> Entorno Rails en OSX</a></li>
+      <li><a href="{{ site.baseurl }}/guias/osx-php.html"{% if page.slug == "osx-php" %} class="active"{% endif %}><i class="em em-checkered_flag"></i> Entorno PHP en OSX</a></li>
     </ul>
   </nav>
 </header>

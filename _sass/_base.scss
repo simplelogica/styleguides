@@ -32,3 +32,11 @@ body {
     }
   }
 }
+@media only screen and (max-width: 767px) {
+  .page-content {
+    padding: 0 35px 0 35px;
+  }
+  .wrapper {
+    padding: 60px 0 40px;
+  }
+}

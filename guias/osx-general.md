@@ -1,5 +1,3 @@
-
-
 ---
 layout: default
 title: Preparación de entorno de desarrollo en OSX
