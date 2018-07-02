@@ -6,12 +6,18 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} · Guía de estilos de Simplelógica</title>
   <meta name="description" content="{{ site.description }}">
 
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="{{ "/js/modernizr.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/menu.js" | prepend: site.baseurl }}"></script>
 </head>

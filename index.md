@@ -4,7 +4,7 @@ title: Índice
 slug: home
 ---
 
-# Guía de estilos de Simplelógica
+# Guía de estilos de The Cocktail
 
 ¡Hola! Si has empezado a trabajar con nosotros, aquí es donde debes mirar cómo
 se escribe la magia que harás en Simplelógica. Si has llegado desde internet, siéntete libre de
