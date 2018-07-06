@@ -6,6 +6,10 @@ slug: osx-php
 
 # Entorno de desarrollo para Drupal en OSX
 
+## Importante antes de continuar con la lectura
+
+Antes de seguir con tu lectura, queremos contarte que toda esta información puede estar algo obsoleta. En los últimos proyectos estamos usando Docker para que la instalación se homogénea en todas las plataformas. En cada proyecto existe documentación de la configuración de los contenedores específicos.
+
 ## Instalación phpbrew
 Para la instalación de PHP y la gestión de sus diferentes versiones utilizaremos PHPBrew.
 
